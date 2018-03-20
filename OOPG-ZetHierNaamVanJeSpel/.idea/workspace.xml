@@ -2,72 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb1546cd-718a-4f66-b061-8f96674695dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/processing.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.project" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/ageofwar.java" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/waterworld/media/bubblesPopped.txt" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/waterworld/media/bubblesPopped.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" afterPath="$PROJECT_DIR$/src/main/main.iml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Alarm/Alarm$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Alarm/Alarm.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Alarm/IAlarmListener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Collision/CollidedTile.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Collision/ICollidableWithGameObjects.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Collision/ICollidableWithTiles.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Dashboard/Dashboard.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Dashboard/FPSCounter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Engine/GameEngine$CollidingHelper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Engine/GameEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Engine/GameThread.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Exceptions/LoggerRuntimeException.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Exceptions/TileNotFoundException.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/DefaultLogger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/FileLogHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/Log.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/LogFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/LogHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Logger/Logger.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/AnimatedSpriteObject.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/GameObject.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/Sprite$SpriteHelper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/Sprite.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/SpriteObject.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Objects/TextObject.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Persistence/FilePersistence.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Persistence/IPersistence.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Sound/Sound.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Tile/EmptyTile.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Tile/Tile.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Tile/TileMap.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/Tile/TileType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/UserInput/IKeyInput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/UserInput/IMouseInput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/CenterFollowingViewport.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/EdgeFollowingViewport.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/FollowingViewport.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/PGraphicsCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/View.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/OOPDProcessingEngineHAN/View/Viewport.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/Bubble.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/BubbleSpawner.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/Oefensuggesties.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/Player.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/Swordfish.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/TextObject.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/WaterWorld.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/Waterworld.mp3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/boards.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/bronnen.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/bubblesPopped.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/player.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/pop.mp3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/media/swordfish.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/han/ica/waterworld/tiles/BoardsTile.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/AgeOfWar.class" afterPath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/AgeOfWar.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/media/background-test.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/media/background-test.jpg" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,12 +21,24 @@
       <file leaf-file-name="AgeOfWar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="285">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#264#265#0" expanded="true" />
                 <element signature="e#339#340#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WaterWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/waterworld/WaterWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="84" column="89" lean-forward="false" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,6 +115,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ica" type="462c0819:PsiDirectoryNode" />
               <item name="ageofware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOPG-ZetHierNaamVanJeSpel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ica" type="462c0819:PsiDirectoryNode" />
+              <item name="ageofware" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OOPG-ZetHierNaamVanJeSpel" type="b2602c69:ProjectViewProjectNode" />
@@ -371,15 +330,16 @@
       <option name="presentableId" value="Default" />
       <updated>1521533417350</updated>
       <workItem from="1521533421946" duration="356000" />
-      <workItem from="1521533788306" duration="206000" />
+      <workItem from="1521533788306" duration="736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562000" />
+    <option name="totallyTimeSpent" value="1092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -389,7 +349,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -435,19 +395,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/waterworld/WaterWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        <state relative-caret-position="244">
+          <caret line="84" column="89" lean-forward="false" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#755#782#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="285">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#264#265#0" expanded="true" />

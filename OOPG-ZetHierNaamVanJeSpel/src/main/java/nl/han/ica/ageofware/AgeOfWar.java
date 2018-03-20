@@ -12,15 +12,15 @@ public class AgeOfWar extends GameEngine {
 
     @Override
     public void setupGame() {
-        int worldWidth=1204;
-        int worldHeight=903;
+        int worldWidth=1920;
+        int worldHeight=1080;
 
         createViewWithoutViewport(worldWidth, worldHeight);
     }
 
     private void createViewWithoutViewport(int screenWidth, int screenHeight) {
         View view = new View(screenWidth,screenHeight);
-        view.setBackground(loadImage("src/main/java/nl/han/ica/AgeOfWar/media/background-test.jpg"));
+        view.setBackground(loadImage("src/main/java/nl/han/ica/ageofware/media/background-test.png"));
 
         setView(view);
         size(screenWidth, screenHeight);
