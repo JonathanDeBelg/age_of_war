@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processing">
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/lib/processing" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
