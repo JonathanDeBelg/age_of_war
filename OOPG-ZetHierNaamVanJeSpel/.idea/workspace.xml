@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb1546cd-718a-4f66-b061-8f96674695dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/AgeOfWar.class" afterPath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/AgeOfWar.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/nl/han/ica/ageofware/media/background-test.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java" afterPath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/media/background-test.jpg" afterPath="" />
-    </list>
+    <list default="true" id="fb1546cd-718a-4f66-b061-8f96674695dd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -330,12 +324,12 @@
       <option name="presentableId" value="Default" />
       <updated>1521533417350</updated>
       <workItem from="1521533421946" duration="356000" />
-      <workItem from="1521533788306" duration="736000" />
+      <workItem from="1521533788306" duration="1027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1092000" />
+    <option name="totallyTimeSpent" value="1383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1053" extended-state="6" />
