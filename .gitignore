@@ -33,6 +33,8 @@ OOPG-ZetHierNaamVanJeSpel/.idea/**/mongoSettings.xml
 ## File-based project format:
 OOPG-ZetHierNaamVanJeSpel/*.iws
 
+**/*.iml
+
 ## Plugin-specific files:
 
 # IntelliJ
