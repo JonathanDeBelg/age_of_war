@@ -11,6 +11,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AgeOfWar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/ageofware/AgeOfWar.java">
@@ -39,6 +42,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> 2048ad6b416119a3aed8822aa03dde5f5d3393b0
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -103,6 +107,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ica" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="OOPG-ZetHierNaamVanJeSpel" type="b2602c69:ProjectViewProjectNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -151,6 +157,7 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="main" type="cbb8eebc:String" user="main" />
             </path>
+>>>>>>> 2048ad6b416119a3aed8822aa03dde5f5d3393b0
           </expand>
           <select />
         </subPane>
@@ -322,18 +329,39 @@
       <created>1521533417350</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1521126066412</updated>
+      <workItem from="1521126074540" duration="1167000" />
+      <workItem from="1521462755006" duration="1717000" />
+=======
       <updated>1521533417350</updated>
       <workItem from="1521533421946" duration="356000" />
+<<<<<<< HEAD
       <workItem from="1521533788306" duration="1027000" />
+=======
+      <workItem from="1521533788306" duration="736000" />
+>>>>>>> 2048ad6b416119a3aed8822aa03dde5f5d3393b0
+>>>>>>> d875b0cf794719f51c5d59fbb4d3688a76342e75
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1383000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="2884000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="1092000" />
+>>>>>>> d875b0cf794719f51c5d59fbb4d3688a76342e75
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1053" extended-state="6" />
     <editor active="true" />
+>>>>>>> 2048ad6b416119a3aed8822aa03dde5f5d3393b0
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -348,7 +376,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -389,8 +417,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/waterworld/WaterWorld.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="475">
+          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+=======
         <state relative-caret-position="244">
           <caret line="84" column="89" lean-forward="false" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
+>>>>>>> 2048ad6b416119a3aed8822aa03dde5f5d3393b0
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
