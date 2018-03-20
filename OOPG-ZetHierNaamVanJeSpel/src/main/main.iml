@@ -10,11 +10,11 @@
     <orderEntry type="library" name="core-2.2.1" level="project" />
     <orderEntry type="library" name="minim-1.0" level="project" />
     <orderEntry type="library" name="gifanimation-1.0" level="project" />
-    <orderEntry type="library" name="sound-1.0" level="project" />
+    <orderEntry type="library" name="tritonus_share-1.0" level="project" />
+    <orderEntry type="library" name="jl-1.0" level="project" />
     <orderEntry type="library" name="jsminim-1.0" level="project" />
     <orderEntry type="library" name="tritonus_aos-1.9.4" level="project" />
-    <orderEntry type="library" name="jl-1.0" level="project" />
-    <orderEntry type="library" name="tritonus_share-1.0" level="project" />
     <orderEntry type="library" name="mp3spi-1.9.4" level="project" />
+    <orderEntry type="library" name="sound-1.0" level="project" />
   </component>
 </module>
