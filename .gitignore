@@ -7,54 +7,54 @@
 OOPG-ZetHierNaamVanJeSpel/.idea/
 
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
+OOPG-ZetHierNaamVanJeSpel/.idea/**/workspace.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/tasks.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/dictionaries
 
 # Sensitive or high-churn files:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/dataSources/
+OOPG-ZetHierNaamVanJeSpel/.idea/**/dataSources.ids
+OOPG-ZetHierNaamVanJeSpel/.idea/**/dataSources.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/dataSources.local.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/sqlDataSources.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/dynamic.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/uiDesigner.xml
 
 # Gradle:
-.idea/**/gradle.xml
-.idea/**/libraries
+OOPG-ZetHierNaamVanJeSpel/.idea/**/gradle.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/libraries
 
 # CMake
 cmake-build-debug/
 
 # Mongo Explorer plugin:
-.idea/**/mongoSettings.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/**/mongoSettings.xml
 
 ## File-based project format:
-*.iws
+OOPG-ZetHierNaamVanJeSpel/*.iws
 
 ## Plugin-specific files:
 
 # IntelliJ
-/out/
+OOPG-ZetHierNaamVanJeSpel/out/
 
 # mpeltonen/sbt-idea plugin
-.idea_modules/
+OOPG-ZetHierNaamVanJeSpel/.idea_modules/
 
 # JIRA plugin
-atlassian-ide-plugin.xml
+OOPG-ZetHierNaamVanJeSpel/atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-.idea/replstate.xml
+OOPG-ZetHierNaamVanJeSpel/.idea/replstate.xml
 
 # Ruby plugin and RubyMine
-/.rakeTasks
+OOPG-ZetHierNaamVanJeSpel//.rakeTasks
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+OOPG-ZetHierNaamVanJeSpel/com_crashlytics_export_strings.xml
+OOPG-ZetHierNaamVanJeSpel/crashlytics.properties
+OOPG-ZetHierNaamVanJeSpel/crashlytics-build.properties
+OOPG-ZetHierNaamVanJeSpel/fabric.properties
 
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
@@ -65,64 +65,64 @@ fabric.properties
 # *.ipr
 
 # Sonarlint plugin
-.idea/sonarlint
+OOPG-ZetHierNaamVanJeSpel/.idea/sonarlint
 
 ### Eclipse ###
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
+OOPG-ZetHierNaamVanJeSpel/.metadata
+OOPG-ZetHierNaamVanJeSpel/bin/
+OOPG-ZetHierNaamVanJeSpel/tmp/
+OOPG-ZetHierNaamVanJeSpel/*.tmp
+OOPG-ZetHierNaamVanJeSpel/*.bak
+OOPG-ZetHierNaamVanJeSpel/*.swp
+OOPG-ZetHierNaamVanJeSpel/*~.nib
+OOPG-ZetHierNaamVanJeSpel/local.properties
+OOPG-ZetHierNaamVanJeSpel/.settings/
+OOPG-ZetHierNaamVanJeSpel/.loadpath
+OOPG-ZetHierNaamVanJeSpel/.recommenders
 
 # External tool builders
-.externalToolBuilders/
+OOPG-ZetHierNaamVanJeSpel/.externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
-*.launch
+OOPG-ZetHierNaamVanJeSpel/*.launch
 
 # PyDev specific (Python IDE for Eclipse)
-*.pydevproject
+OOPG-ZetHierNaamVanJeSpel/*.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
-.cproject
+OOPG-ZetHierNaamVanJeSpel/.cproject
 
 # Java annotation processor (APT)
-.factorypath
+OOPG-ZetHierNaamVanJeSpel/.factorypath
 
 # PDT-specific (PHP Development Tools)
-.buildpath
+OOPG-ZetHierNaamVanJeSpel/.buildpath
 
 # sbteclipse plugin
-.target
+OOPG-ZetHierNaamVanJeSpel/.target
 
 # Tern plugin
-.tern-project
+OOPG-ZetHierNaamVanJeSpel/.tern-project
 
 # TeXlipse plugin
-.texlipse
+OOPG-ZetHierNaamVanJeSpel/.texlipse
 
 # STS (Spring Tool Suite)
-.springBeans
+OOPG-ZetHierNaamVanJeSpel/.springBeans
 
 # Code Recommenders
-.recommenders/
+OOPG-ZetHierNaamVanJeSpel/.recommenders/
 
 # Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
+OOPG-ZetHierNaamVanJeSpel/.cache-main
+OOPG-ZetHierNaamVanJeSpel/.scala_dependencies
+OOPG-ZetHierNaamVanJeSpel/.worksheet
 
 ### Eclipse Patch ###
 # Eclipse Core
-.project
+OOPG-ZetHierNaamVanJeSpel/.project
 
 # JDT-specific (Eclipse Java Development Tools)
-.classpath
+OOPG-ZetHierNaamVanJeSpel/.classpath
 
 # End of https://www.gitignore.io/api/eclipse
