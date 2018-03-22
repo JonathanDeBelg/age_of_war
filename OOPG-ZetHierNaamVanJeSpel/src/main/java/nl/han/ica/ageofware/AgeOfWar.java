@@ -6,6 +6,8 @@ import processing.core.PApplet;
 
 public class AgeOfWar extends GameEngine {
 
+    Playfield p = new Playfield(this);
+
     public static void main(String[] args){
         PApplet.main(new String[]{"nl.han.ica.ageofware.AgeOfWar"});
     }
@@ -24,6 +26,8 @@ public class AgeOfWar extends GameEngine {
 
         setView(view);
         size(screenWidth, screenHeight);
+
+        p.createObjects();
     }
 
     @Override
