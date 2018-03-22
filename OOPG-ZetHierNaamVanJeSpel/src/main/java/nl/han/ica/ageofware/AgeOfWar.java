@@ -12,8 +12,8 @@ public class AgeOfWar extends GameEngine {
 
     @Override
     public void setupGame() {
-        int worldWidth=1000;
-        int worldHeight=500;
+        int worldWidth=1500;
+        int worldHeight=750;
 
         createViewWithoutViewport(worldWidth, worldHeight);
     }
