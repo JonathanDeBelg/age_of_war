@@ -29,7 +29,7 @@ public class Sprite {
 	{
 		this.image = image;
 	}
-	
+
 	/**
 	 * Get the PImage object from the sprite.
 	 * @return PImage

@@ -12,7 +12,9 @@ public class Playfield {
     public void createObjects() {
         Tower speler = new Tower(aow, 0, aow.height - 255);
         Tower computer = new Tower(aow, aow.width-100, aow.height - 255);
+        Character zombie = new Zombie(aow);
         aow.addGameObject(speler, speler.getXpos(), speler.getYpos());
         aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
+        aow.addGameObject(zombie, 255, 180);
     }
 }

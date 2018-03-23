@@ -1,32 +1,22 @@
 package nl.han.ica.ageofware;
 
-import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
-import processing.core.PGraphics;
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.AnimatedSpriteObject;
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
-public abstract class Character extends GameObject {
+public abstract class Character extends AnimatedSpriteObject{
 
+    private final AgeOfWar aow;
     private int cost, damage;
+    private int x = 0;
+    private int y = 255;
+    private int size = 25;
 
-    public Character(int cost, int damage){
-        this.cost = cost;
-        this.damage = damage;
+    public Character(AgeOfWar aow){
+        super((new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie_attack.gif")), 1);
+        this.aow = aow;
     }
 
     public abstract void move();
 
     public abstract void attack();
-
-    public void drawCharacter(){
-        //code
-    }
-
-    @Override
-    public void update() {
-
-    }
-
-    @Override
-    public void draw(PGraphics g) {
-
-    }
 }

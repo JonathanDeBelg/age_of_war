@@ -1,8 +1,8 @@
 package nl.han.ica.ageofware;
 
-public interface IWalkingCharacter {
-
-    public int health, returnMoney;
-
-
-}
+//public interface IWalkingCharacter {
+//
+//    public int health, returnMoney;
+//
+//
+//}
