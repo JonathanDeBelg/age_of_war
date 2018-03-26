@@ -22,6 +22,7 @@ public abstract class Character extends SpriteObject {
     public void update(){
         if (getX()+getWidth()<=0) {
             setX(1500);
+            //commentaar
         }
     }
 }
