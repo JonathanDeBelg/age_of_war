@@ -2,8 +2,9 @@ package nl.han.ica.ageofware;
 
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.AnimatedSpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 
-public abstract class Character extends AnimatedSpriteObject{
+public abstract class Character extends SpriteObject {
 
     private final AgeOfWar aow;
     private int cost, damage;
@@ -12,11 +13,15 @@ public abstract class Character extends AnimatedSpriteObject{
     private int size = 25;
 
     public Character(AgeOfWar aow){
-        super((new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie_attack.gif")), 1);
+        super((new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif")));
         this.aow = aow;
+        setxSpeed(1);
     }
 
-    public abstract void move();
-
-    public abstract void attack();
+    @Override
+    public void update(){
+        if (getX()+getWidth()<=0) {
+            setX(1500);
+        }
+    }
 }

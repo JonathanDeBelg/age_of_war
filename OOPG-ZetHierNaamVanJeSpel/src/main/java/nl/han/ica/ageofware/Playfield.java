@@ -2,6 +2,7 @@ package nl.han.ica.ageofware;
 
 public class Playfield {
     AgeOfWar aow;
+
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
     }
@@ -15,6 +16,6 @@ public class Playfield {
         Character zombie = new Zombie(aow);
         aow.addGameObject(speler, speler.getXpos(), speler.getYpos());
         aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
-        aow.addGameObject(zombie, 255, 180);
+        aow.addGameObject(zombie, 25, aow.height - zombie.getHeight() - 60);
     }
 }

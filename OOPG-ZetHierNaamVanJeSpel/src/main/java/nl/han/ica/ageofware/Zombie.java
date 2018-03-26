@@ -13,13 +13,13 @@ public class Zombie extends Character {
         System.out.println("Doet iets");
     }
 
-    @Override
-    public void move() {
-        System.out.println("Doet iets");
-    }
-
-    @Override
-    public void attack() {
-        System.out.println("Doet iets");
-    }
+//    @Override
+//    public void move() {
+//        System.out.println("Doet iets");
+//    }
+//
+//    @Override
+//    public void attack() {
+//        System.out.println("Doet iets");
+//    }
 }
