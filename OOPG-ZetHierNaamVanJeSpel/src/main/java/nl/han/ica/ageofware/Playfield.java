@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static sun.misc.PostVMInitHook.run;
+
 public class Playfield{
     AgeOfWar aow;
     RandomNPCPicker randomPicker = new RandomNPCPicker();
@@ -25,34 +27,20 @@ public class Playfield{
     public void createObjects() {
         Tower user = new Tower(aow, 0, aow.height - 255);
         Tower computer = new Tower(aow, aow.width-100, aow.height - 255);
+        aow.addGameObject(user,0, aow.height - 61 - user.getHeight());
+        aow.addGameObject(computer,aow.width-computer.getWidth(), aow.height - 61 - computer.getHeight());
 
-//        PlayerPicker playpicker = new PlayerPicker();
-//        Character zombie = new Zombie(aow);
-//        Character zombie2 = new Zombie(aow);
-
-        aow.addGameObject(user, user.getXpos(), user.getYpos());
-        aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
-
-        Timer timer = new Timer();
-
-        timer.schedule(run(), 0, 5000);
-//        aow.addGameObject(randomPicker.generateRandomNPC(), 25,aow.height - 135);
-//        aow.addGameObject(zombie, 25, aow.height - zombie.getHeight() - 60);
-//        aow.addGameObject(zombie2, 50, aow.height - zombie.getHeight() - 60);
-//        aow.addGameObject(playpicker);
-
-        for (character: npcs) {
-
-        }
-
+        npcs.add(new Zombie());
+        players.add(new Zombie());
     }
 
     public void generateCharacter(){
-        PlayerPicker playpicker = new PlayerPicker();
+        for (Character npc: npcs) {
+            aow.addGameObject(npc, 100, aow.height - 135);
+        }
 
-//        if(playpicker.keyPressed() == 1){
-//            new Zombie
-//
-//        }
+        for (Character player: players) {
+            aow.addGameObject(player, 25, aow.height - 135);
+        }
     }
 }
