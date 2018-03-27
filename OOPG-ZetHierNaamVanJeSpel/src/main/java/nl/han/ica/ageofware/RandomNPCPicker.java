@@ -24,7 +24,7 @@ public class RandomNPCPicker{
         Character character;
 
         if (randomCharacter == 1) {
-            aow.addGameObject(new Zombie(), aow.width - 200, aow.height - 135);
+            aow.addGameObject(new Zombie(-1), aow.width - 200, aow.height - 135);
             System.out.println("dingen");
 
         } else {

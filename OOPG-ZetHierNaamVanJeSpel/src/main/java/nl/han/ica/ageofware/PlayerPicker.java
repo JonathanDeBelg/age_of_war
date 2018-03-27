@@ -27,8 +27,9 @@ public class PlayerPicker extends GameObject {
     }
 
     private void generatePlayer(int keyCode) {
+        Character c = null;
         if(keyCode == 49) {
-            aow.addGameObject(new Zombie(), xPos, yPos);
+            c = new Zombie(-1);
         } else if(keyCode == 50) {
             System.out.println("Ninja!");
         } else if(keyCode == 51) {
@@ -36,5 +37,6 @@ public class PlayerPicker extends GameObject {
         } else if(keyCode == 52) {
             System.out.println("Ridder!");
         }
+        aow.addGameObject(c, xPos, yPos);
     }
 }

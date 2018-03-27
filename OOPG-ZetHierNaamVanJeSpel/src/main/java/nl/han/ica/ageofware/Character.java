@@ -12,11 +12,13 @@ public abstract class Character extends SpriteObject{
     private int y = 255;
     private int size = 25;
     private Sprite sprite;
+    private int direction;
 
-    public Character(Sprite sprite){
+    public Character(Sprite sprite, int direction){
         super(sprite);
         this.sprite = sprite;
-        setxSpeed(-1);
+        this.direction = direction;
+        setxSpeed(direction);
     }
 
     @Override
