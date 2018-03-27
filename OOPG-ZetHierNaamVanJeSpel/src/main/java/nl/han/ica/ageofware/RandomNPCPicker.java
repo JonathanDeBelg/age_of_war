@@ -26,7 +26,6 @@ public class RandomNPCPicker{
         if (randomCharacter == 1) {
             aow.addGameObject(new Zombie(), aow.width - 200, aow.height - 135);
             System.out.println("dingen");
-
         } else {
             System.out.println("andere dingen");
 
