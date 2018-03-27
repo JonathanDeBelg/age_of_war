@@ -5,10 +5,6 @@ import processing.core.PGraphics;
 
 public class PlayerPicker extends GameObject{
 
-    public void run() {
-        System.out.println("Random tekst");
-    }
-
     @Override
     public void update() {
     }
@@ -18,6 +14,7 @@ public class PlayerPicker extends GameObject{
 
     }
 
+    @Override
     public void keyPressed(int keyCode, char key) {
         System.out.println(keyCode);
         maakCharacter(keyCode);
