@@ -1,15 +1,26 @@
 package nl.han.ica.ageofware;
 
-public class CharacterFactory {
-    private AgeOfWar aow;
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
+import processing.core.PGraphics;
 
-    public CharacterFactory(AgeOfWar aow) {
-        this.aow = aow;
+public class CharacterFactory extends GameObject{
+
+
+//    PlayerPicker pickPlayer = new PlayerPicker();
+    AgeOfWar aow;
+
+    public CharacterFactory() {
+        aow.addGameObject(new PlayerPicker());
     }
 
-    public void characterSpawner() {
+
+    @Override
+    public void update() {
 
     }
 
+    @Override
+    public void draw(PGraphics g) {
 
+    }
 }

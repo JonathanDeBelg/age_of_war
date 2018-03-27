@@ -4,16 +4,19 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.AnimatedSpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IMouseInput;
+import nl.han.ica.waterworld.Player;
 
 public abstract class Character extends SpriteObject{
     private int cost, damage;
     private int x = 0;
     private int y = 255;
     private int size = 25;
+    private Sprite sprite;
 
-    public Character(){
-        super((new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif")));
-        setxSpeed(1);
+    public Character(Sprite sprite){
+        super(sprite);
+        this.sprite = sprite;
+        setxSpeed(-1);
     }
 
     @Override
@@ -23,4 +26,12 @@ public abstract class Character extends SpriteObject{
             //commentaar
         }
     }
+
+//    public int geefDirection(){
+//        if(Character instanceof Player){
+//            return -1;
+//        } else {
+//            return 1;
+//        }
+//    }
 }
