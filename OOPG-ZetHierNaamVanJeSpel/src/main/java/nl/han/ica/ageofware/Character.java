@@ -17,12 +17,8 @@ public abstract class Character extends SpriteObject{
     public Character(Sprite sprite, int direction){
         super(sprite);
         this.sprite = sprite;
-<<<<<<< HEAD
-        setxSpeed(geefDirection());
-=======
         this.direction = direction;
         setxSpeed(direction);
->>>>>>> 0ecfa17f4eb5c80b4809633d943fef97ad17c31f
     }
 
     @Override
@@ -30,14 +26,6 @@ public abstract class Character extends SpriteObject{
         if (getX() + getWidth() <= 0) {
             setX(1500);
             //commentaar
-        }
-    }
-
-    public int geefDirection(){
-        if(Character instanceof PlayerPicker){
-            return -1;
-        } else if (Character instanceof RandomNPCPicker){
-            return 1;
         }
     }
 }

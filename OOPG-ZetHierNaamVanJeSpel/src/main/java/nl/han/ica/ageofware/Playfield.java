@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Playfield{
+public class Playfield extends Timer{
     AgeOfWar aow;
     RandomNPCPicker randomPicker;
 
@@ -36,8 +36,9 @@ public class Playfield{
         aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
 
         Timer timer = new Timer();
+        TimerTask tasknew = new RandomNPCPicker(aow);
 
-        randomPicker.generateRandomNPC();
+        timer.schedule(tasknew, 0, 500);
 
     }
 

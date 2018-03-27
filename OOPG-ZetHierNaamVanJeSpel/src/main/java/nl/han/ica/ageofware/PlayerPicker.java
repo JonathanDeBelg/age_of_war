@@ -27,15 +27,15 @@ public class PlayerPicker extends GameObject {
     }
 
     private void generatePlayer(int keyCode) {
-        Character c = null;
+        Character c = new Zombie(1);
         if(keyCode == 49) {
-            c = new Zombie(-1);
+            c = new Zombie(1);
         } else if(keyCode == 50) {
-            System.out.println("Ninja!");
+            System.out.println("NINJA");
         } else if(keyCode == 51) {
-            System.out.println("Vogel!");
+            System.out.println("Vogel");
         } else if(keyCode == 52) {
-            System.out.println("Ridder!");
+            System.out.println("RIDDER");
         }
         aow.addGameObject(c, xPos, yPos);
     }
