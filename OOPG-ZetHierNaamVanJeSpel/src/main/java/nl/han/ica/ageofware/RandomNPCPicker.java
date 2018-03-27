@@ -1,4 +1,7 @@
 package nl.han.ica.ageofware;
+import nl.han.ica.OOPDProcessingEngineHAN.Dashboard.Dashboard;
+import nl.han.ica.OOPDProcessingEngineHAN.Engine.GameEngine;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,7 +27,7 @@ public class RandomNPCPicker extends TimerTask{
         }
 
 //        else if (randomCharacter == 2){
-////            return Ninja;
+//            return Ninja;
 //            System.out.println("NINJA!!");
 //        }
 
