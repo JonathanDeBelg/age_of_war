@@ -1,8 +1,12 @@
 package nl.han.ica.ageofware;
 
-import java.util.ArrayList;
+import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IKeyInput;
+import nl.han.ica.waterworld.Player;
 
-public class Playfield {
+import java.util.ArrayList;
+import java.util.Timer;
+
+public class Playfield{
     AgeOfWar aow;
 
     ArrayList<Character> players;
@@ -20,11 +24,34 @@ public class Playfield {
     public void createObjects() {
         Tower user = new Tower(aow, 0, aow.height - 255);
         Tower computer = new Tower(aow, aow.width-100, aow.height - 255);
-
-        Character zombie = new Zombie(aow);
+        RandomNPCPicker randomPicker = new RandomNPCPicker();
+//        PlayerPicker playpicker = new PlayerPicker();
+//        Character zombie = new Zombie(aow);
+//        Character zombie2 = new Zombie(aow);
 
         aow.addGameObject(user, user.getXpos(), user.getYpos());
         aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
-        aow.addGameObject(zombie, 25, aow.height - zombie.getHeight() - 60);
+
+        Timer timer = new Timer();
+
+
+        aow.addGameObject(timer.schedule(new RandomNPCPicker(), 0, 5000), 25, aow.height - 135 );
+//        aow.addGameObject(randomPicker.generateRandomNPC(), 25,aow.height - 135);
+//        aow.addGameObject(zombie, 25, aow.height - zombie.getHeight() - 60);
+//        aow.addGameObject(zombie2, 50, aow.height - zombie.getHeight() - 60);
+//        aow.addGameObject(playpicker);
     }
+
+    public void generateCharacter(){
+        PlayerPicker playpicker = new PlayerPicker();
+
+//        if(playpicker.keyPressed() == 1){
+//            new Zombie
+//
+//        }
+
+
+
+    }
+
 }

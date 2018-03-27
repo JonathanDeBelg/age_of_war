@@ -50,7 +50,7 @@ public class Player extends AnimatedSpriteObject implements ICollidableWithTiles
         }
 
     }
-    @Override
+   @Override
     public void keyPressed(int keyCode, char key) {
         final int speed = 5;
         if (keyCode == world.LEFT) {

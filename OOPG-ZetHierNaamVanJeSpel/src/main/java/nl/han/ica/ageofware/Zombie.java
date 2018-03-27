@@ -4,13 +4,13 @@ public class Zombie extends Character {
 
 
 
-    public Zombie(AgeOfWar aow) {
-        super(aow);
+    public Zombie() {
+        //super(aow);
     }
 
     @Override
     public void update() {
-        System.out.println("Doet iets");
+//        System.out.println("Doet iets");
     }
 
 //    @Override
