@@ -1,6 +1,9 @@
 package nl.han.ica.ageofware;
 
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
+
+import java.util.List;
 
 public class Zombie extends Character {
     int direction;
@@ -15,13 +18,22 @@ public class Zombie extends Character {
 //        System.out.println("Doet iets");
     }
 
+    @Override
+    public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
+        for (GameObject object: collidedGameObjects) {
+            if(object instanceof Character) {
+                attack();
+            }
+
+        }
+    }
+
 //    @Override
 //    public void move() {
 //        System.out.println("Doet iets");
 //    }
 //
-//    @Override
-//    public void attack() {
-//        System.out.println("Doet iets");
-//    }
+    public void attack() {
+        setxSpeed(0);
+    }
 }

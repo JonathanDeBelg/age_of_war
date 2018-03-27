@@ -1,12 +1,13 @@
 package nl.han.ica.ageofware;
 
+import nl.han.ica.OOPDProcessingEngineHAN.Collision.ICollidableWithGameObjects;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.AnimatedSpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IMouseInput;
 import nl.han.ica.waterworld.Player;
 
-public abstract class Character extends SpriteObject{
+public abstract class Character extends SpriteObject implements ICollidableWithGameObjects{
     private int cost, damage;
     private int x = 0;
     private int y = 255;
