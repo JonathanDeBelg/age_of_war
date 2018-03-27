@@ -27,10 +27,10 @@ public class AgeOfWar extends GameEngine {
         setView(view);
         size(screenWidth, screenHeight);
         p.createObjects();
+        p.generateCharacter();
     }
 
     @Override
     public void update() {
-        p.generateCharacter();
     }
 }

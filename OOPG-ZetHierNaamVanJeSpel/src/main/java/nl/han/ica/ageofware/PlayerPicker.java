@@ -4,11 +4,6 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import processing.core.PGraphics;
 
 public class PlayerPicker extends GameObject{
-
-    public void run() {
-        System.out.println("Random tekst");
-    }
-
     @Override
     public void update() {
     }
@@ -19,11 +14,16 @@ public class PlayerPicker extends GameObject{
     }
 
     public void keyPressed(int keyCode, char key) {
-        System.out.println(keyCode);
-        maakCharacter(keyCode);
+        if(keyCode == 49) {
+//            character = new Zombie();
+            System.out.println("ZOMBIE");
+        } else {
+//            character = null;
+            System.out.println("NINJA");
+        }
     }
 
-    private Character maakCharacter(int keyCode) {
+    private Character generatePlayer(int keyCode) {
         Character character;
 
         if(keyCode == 49) {
