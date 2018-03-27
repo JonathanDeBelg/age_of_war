@@ -3,12 +3,11 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
 public class Zombie extends Character {
+    int direction;
 
 
-
-    public Zombie() {
-        super(new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif"));
-
+    public Zombie(int direction) {
+        super(new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif"), direction);
     }
 
     @Override
