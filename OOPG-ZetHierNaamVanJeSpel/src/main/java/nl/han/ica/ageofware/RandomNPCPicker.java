@@ -5,8 +5,9 @@ import nl.han.ica.OOPDProcessingEngineHAN.Engine.GameEngine;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
+import java.util.ArrayList;
 public class RandomNPCPicker extends TimerTask{
+
 
     public void run() {
         System.out.println("Random tekst");
