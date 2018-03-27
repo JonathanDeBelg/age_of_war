@@ -38,7 +38,7 @@ public class Playfield extends Timer{
         Timer timer = new Timer();
         TimerTask tasknew = new RandomNPCPicker(aow);
 
-        timer.schedule(tasknew, 0, 500);
+        timer.schedule(tasknew, 0, 2500);
 
     }
 
