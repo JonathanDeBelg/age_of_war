@@ -8,17 +8,19 @@ import java.util.TimerTask;
 import java.util.ArrayList;
 
 
-public class RandomNPCPicker{
-
+public class RandomNPCPicker extends TimerTask{
+    Timer timer;
     private AgeOfWar aow;
 
     public RandomNPCPicker(AgeOfWar aow){
         this.aow = aow;
-
+        timer =  new Timer();
     }
 
     public void generateRandomNPC(){
         Random rand = new Random();
+
+
         int randomCharacter = rand.nextInt(2) + 1;
 
         Character character;
@@ -26,12 +28,16 @@ public class RandomNPCPicker{
         if (randomCharacter == 1) {
             aow.addGameObject(new Zombie(-1), aow.width - 200, aow.height - 135);
             System.out.println("dingen");
-
         } else {
             System.out.println("andere dingen");
 
         }
 
 
+    }
+
+    @Override
+    public void run() {
+        generateRandomNPC();
     }
 }

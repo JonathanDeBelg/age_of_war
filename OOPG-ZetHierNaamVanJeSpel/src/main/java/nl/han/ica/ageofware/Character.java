@@ -29,12 +29,4 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             //commentaar
         }
     }
-
-//    public int geefDirection(){
-//        if(Character instanceof Player){
-//            return -1;
-//        } else {
-//            return 1;
-//        }
-//    }
 }
