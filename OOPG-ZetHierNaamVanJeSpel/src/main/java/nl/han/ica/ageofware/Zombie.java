@@ -1,11 +1,14 @@
 package nl.han.ica.ageofware;
 
+import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
+
 public class Zombie extends Character {
 
 
 
     public Zombie() {
-        //super(aow);
+        super(new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif"));
+
     }
 
     @Override

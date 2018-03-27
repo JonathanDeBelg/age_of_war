@@ -14,9 +14,9 @@ public class PlayerPicker extends GameObject {
         xPos = 25;
         yPos = 615;
     }
-
     @Override
-    public void update() {}
+    public void update() {
+    }
 
     @Override
     public void draw(PGraphics g) {}

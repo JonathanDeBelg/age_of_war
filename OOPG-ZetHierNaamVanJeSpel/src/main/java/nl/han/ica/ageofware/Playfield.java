@@ -6,16 +6,14 @@ import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IKeyInput;
 import nl.han.ica.waterworld.Player;
 import processing.core.PGraphics;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Playfield{
     AgeOfWar aow;
-    RandomNPCPicker randomPicker = new RandomNPCPicker();
-    CharacterFactory cf = new CharacterFactory(aow);
-
+    RandomNPCPicker randomPicker;
+    //CharacterFactory cf = new CharacterFactory(aow);
     ArrayList<Character> players;
     ArrayList<Character> npcs;
 
@@ -24,6 +22,7 @@ public class Playfield{
         aow.addGameObject(new PlayerPicker(aow));
         players = new ArrayList<Character>();
         npcs = new ArrayList<Character>();
+        randomPicker = new RandomNPCPicker(aow);
     }
 
     /**
@@ -38,20 +37,10 @@ public class Playfield{
 
         Timer timer = new Timer();
 
-        npcs.add(new Zombie());
-        players.add(new Zombie());
-
-
+        randomPicker.generateRandomNPC();
 
     }
 
     public void generateCharacter(){
-        for (Character npc: npcs) {
-            aow.addGameObject(npc, 100, aow.height - 135);
-        }
-
-        for (Character player: players) {
-            aow.addGameObject(player, 25, aow.height - 135);
-        }
     }
 }

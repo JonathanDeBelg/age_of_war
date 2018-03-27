@@ -10,19 +10,28 @@ import java.util.ArrayList;
 
 public class RandomNPCPicker{
 
-    public Character generateRandomNPC(){
+    private AgeOfWar aow;
+
+    public RandomNPCPicker(AgeOfWar aow){
+        this.aow = aow;
+
+    }
+
+    public void generateRandomNPC(){
         Random rand = new Random();
         int randomCharacter = rand.nextInt(2) + 1;
 
         Character character;
 
         if (randomCharacter == 1) {
-            character = new Zombie();
+            aow.addGameObject(new Zombie(), aow.width - 200, aow.height - 135);
+            System.out.println("dingen");
 
         } else {
-            return character = new Zombie();
+            System.out.println("andere dingen");
+
         }
 
-        return character;
+
     }
 }
