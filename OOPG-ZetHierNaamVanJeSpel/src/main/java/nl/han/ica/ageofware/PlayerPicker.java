@@ -7,12 +7,10 @@ public class PlayerPicker extends GameObject{
 
     public void run() {
         System.out.println("Random tekst");
-
     }
 
     @Override
     public void update() {
-
     }
 
     @Override
@@ -20,18 +18,20 @@ public class PlayerPicker extends GameObject{
 
     }
 
-//    public int returnZombie(int keyCode, char key){
-//        if (keyCode == 49) {
-//            return 1;
-//
-//        }
-//        if (keyCode == 50) {
-//            return 2;
-//        }
-//    }
-//
-//    @Override
-//    public void keyPressed(int keyCode, char key) {
-//        returnZombie(keyCode, key);
-//    }
+    public void keyPressed(int keyCode, char key) {
+        System.out.println(keyCode);
+        maakCharacter(keyCode);
+    }
+
+    private Character maakCharacter(int keyCode) {
+        Character character;
+
+        if(keyCode == 49) {
+            character = new Zombie();
+        } else {
+            character = null;
+        }
+
+        return character;
+    }
 }
