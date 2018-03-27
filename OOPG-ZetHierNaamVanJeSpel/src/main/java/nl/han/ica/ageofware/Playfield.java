@@ -14,13 +14,14 @@ import java.util.TimerTask;
 public class Playfield{
     AgeOfWar aow;
     RandomNPCPicker randomPicker = new RandomNPCPicker();
+    CharacterFactory cf = new CharacterFactory(aow);
 
     ArrayList<Character> players;
     ArrayList<Character> npcs;
 
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
-        aow.addGameObject(new PlayerPicker());
+        aow.addGameObject(new PlayerPicker(aow));
         players = new ArrayList<Character>();
         npcs = new ArrayList<Character>();
     }

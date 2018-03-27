@@ -3,40 +3,38 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import processing.core.PGraphics;
 
-public class PlayerPicker extends GameObject{
-<<<<<<< HEAD
-=======
+public class PlayerPicker extends GameObject {
 
->>>>>>> 7f78a233d3a775ca32808b872a34d23290d2770a
-    @Override
-    public void update() {
+    private AgeOfWar aow;
+    private int xPos;
+    private int yPos;
+
+    public PlayerPicker(AgeOfWar aow) {
+        this.aow = aow;
+        xPos = 25;
+        yPos = 615;
     }
 
     @Override
-    public void draw(PGraphics g) {
-
-    }
+    public void update() {}
 
     @Override
-    public void keyPressed(int keyCode, char key) {
+    public void draw(PGraphics g) {}
+
+    @Override
+    public void keyReleased(int keyCode, char key) {
+        generatePlayer(keyCode);
+    }
+
+    private void generatePlayer(int keyCode) {
         if(keyCode == 49) {
-//            character = new Zombie();
-            System.out.println("ZOMBIE");
-        } else {
-//            character = null;
-            System.out.println("NINJA");
+            aow.addGameObject(new Zombie(), xPos, yPos);
+        } else if(keyCode == 50) {
+            System.out.println("Ninja!");
+        } else if(keyCode == 51) {
+            System.out.println("Vogel!");
+        } else if(keyCode == 52) {
+            System.out.println("Ridder!");
         }
-    }
-
-    private Character generatePlayer(int keyCode) {
-        Character character;
-
-        if(keyCode == 49) {
-            character = new Zombie();
-        } else {
-            character = null;
-        }
-
-        return character;
     }
 }
