@@ -41,7 +41,6 @@ public class Playfield extends Timer{
         timer.schedule(tasknew, 0, 2500);
 
     }
-
     public void generateCharacter(){
     }
 }

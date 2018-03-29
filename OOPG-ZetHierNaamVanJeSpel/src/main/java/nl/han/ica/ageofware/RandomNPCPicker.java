@@ -23,10 +23,10 @@ public class RandomNPCPicker extends TimerTask{
 
         int randomCharacter = rand.nextInt(2) + 1;
 
-        Character c = new Zombie(-1, false, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
+        Character c = new Zombie(-1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
         c.setDirection(360);
         if (randomCharacter == 1) {
-            c = new Zombie((int) c.getDirection(),false, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
+            c = new Zombie((int) c.getDirection(),"src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
             c.setDirectionSpeed((int) c.getDirection(), -1);
             aow.addGameObject(c, aow.width - 200, aow.height - 135);
             System.out.println("dingen");

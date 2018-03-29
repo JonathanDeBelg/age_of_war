@@ -7,10 +7,10 @@ import java.util.List;
 
 public class Zombie extends Character implements IWalkingCharacter {
     int direction;
-    private int health;
+    private int health = 100;
 
-    public Zombie(int direction, boolean player, String sprite) {
-        super(new Sprite(sprite), direction, player);
+    public Zombie(int direction, String sprite) {
+        super(new Sprite(sprite), direction);
     }
 
     @Override
@@ -18,13 +18,26 @@ public class Zombie extends Character implements IWalkingCharacter {
 //        System.out.println("Doet iets");
     }
 
-//    @Override
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+//        @Override
 //    public void move() {
 //        System.out.println("Doet iets");
-//    }
+////    }
 //
     @Override
-    public void attack() {
-        setxSpeed(0);
+   public void attack() {
+//        Character enemy =
+//        if(timer){
+//            if(character.isFriend())
+//            tegenstander.health -= 50;
+//        }
     }
 }

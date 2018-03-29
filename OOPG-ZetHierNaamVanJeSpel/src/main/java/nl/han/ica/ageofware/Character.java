@@ -18,13 +18,13 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private int size = 25;
     private Sprite sprite;
     private int direction;
-    private List<Character> friends;
+    private PlayerPicker playerPicker;
+    AgeOfWar aow;
 
     public Character(Sprite sprite, int direction){
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
-        this.friends = new ArrayList<>();
         setxSpeed(direction);
     }
 
@@ -35,20 +35,21 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
                 Character chararacter = (Character) object;
                 setxSpeed(0);
                 if(!isFriend(chararacter)){
-                    //attack();
+                    attack();
                 }
-
             }
-
         }
     }
 
-    public void addFriends(Character character){
-        this.friends.add(character);
-    }
+//    public void addFriends(Character character){
+//        this.friends.add(character);
+//    }
 
     private boolean isFriend(Character character){
-        return this.friends.contains(character);
+        playerPicker = new PlayerPicker(aow);
+        ArrayList<Character> characters = playerPicker.getCharacters();
+        System.out.println(characters);
+        return characters.contains(character);
     }
 
     @Override
