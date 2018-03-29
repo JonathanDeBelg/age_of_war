@@ -28,9 +28,11 @@ public class PlayerPicker extends GameObject {
     }
 
     private void generatePlayer(int keyCode) {
-        Character c = new Zombie(1);
+        Character c = new Zombie(1, true);
+        c.setDirection(90);
         if(keyCode == 49) {
-            c = new Zombie(1);
+            c = new Zombie((int) c.getDirection(), true);
+            c.setDirectionSpeed(c.getDirection(), 1);
         } else if(keyCode == 50) {
             System.out.println("NINJA");
         } else if(keyCode == 51) {
