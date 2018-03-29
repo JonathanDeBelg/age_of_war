@@ -8,6 +8,7 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IMouseInput;
 import nl.han.ica.waterworld.Player;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Character extends SpriteObject implements ICollidableWithGameObjects{
@@ -17,13 +18,13 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private int size = 25;
     private Sprite sprite;
     private int direction;
-    private boolean player;
+    private List<Character> friends;
 
-    public Character(Sprite sprite, int direction, boolean player){
+    public Character(Sprite sprite, int direction){
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
-        this.player = player;
+        this.friends = new ArrayList<>();
         setxSpeed(direction);
     }
 
@@ -31,10 +32,23 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object: collidedGameObjects) {
             if(object instanceof Character) {
+                Character chararacter = (Character) object;
                 setxSpeed(0);
+                if(!isFriend(chararacter)){
+                    //attack();
+                }
+
             }
 
         }
+    }
+
+    public void addFriends(Character character){
+        this.friends.add(character);
+    }
+
+    private boolean isFriend(Character character){
+        return this.friends.contains(character);
     }
 
     @Override
