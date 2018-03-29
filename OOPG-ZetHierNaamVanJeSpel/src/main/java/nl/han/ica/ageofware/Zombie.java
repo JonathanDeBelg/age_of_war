@@ -8,9 +8,8 @@ import java.util.List;
 public class Zombie extends Character {
     int direction;
 
-
-    public Zombie(int direction, boolean player) {
-        super(new Sprite("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif"), direction, player);
+    public Zombie(int direction, boolean player, String sprite) {
+        super(new Sprite(sprite), direction, player);
     }
 
     @Override

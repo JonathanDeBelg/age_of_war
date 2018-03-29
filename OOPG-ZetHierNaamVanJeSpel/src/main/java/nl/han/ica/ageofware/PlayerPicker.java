@@ -40,9 +40,9 @@ public class PlayerPicker extends GameObject {
     }
 
     private void generatePlayer(int keyCode){
-        Character c = new Zombie(1, true);
+        Character c = new Zombie(1, true, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
         if (keyCode == 49) {
-            c = new Zombie(1, true);
+            c = new Zombie(1, true, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
         } else if (keyCode == 50) {
             System.out.println("NINJA");
         } else if (keyCode == 51) {
