@@ -23,17 +23,15 @@ public class RandomNPCPicker extends TimerTask{
 
         int randomCharacter = rand.nextInt(2) + 1;
 
-        Character character;
+        Character c = new Zombie(-1);
 
         if (randomCharacter == 1) {
-            aow.addGameObject(new Zombie(-1), aow.width - 200, aow.height - 135);
+            c = new Zombie(-1);
+            aow.addGameObject(c, aow.width - 200, aow.height - 135);
             System.out.println("dingen");
         } else {
             System.out.println("andere dingen");
-
         }
-
-
     }
 
     @Override

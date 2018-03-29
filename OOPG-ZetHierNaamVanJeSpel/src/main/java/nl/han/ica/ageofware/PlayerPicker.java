@@ -14,6 +14,7 @@ public class PlayerPicker extends GameObject {
         xPos = 25;
         yPos = 615;
     }
+
     @Override
     public void update() {
     }
@@ -28,7 +29,6 @@ public class PlayerPicker extends GameObject {
 
     private void generatePlayer(int keyCode) {
         Character c = new Zombie(1);
-        c.setDirection(1);
         if(keyCode == 49) {
             c = new Zombie(1);
         } else if(keyCode == 50) {
