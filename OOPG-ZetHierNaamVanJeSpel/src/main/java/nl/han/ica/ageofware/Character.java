@@ -44,4 +44,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             //commentaar
         }
     }
+
+    public abstract void attack();
 }

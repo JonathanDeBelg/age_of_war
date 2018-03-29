@@ -5,8 +5,9 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
 import java.util.List;
 
-public class Zombie extends Character {
+public class Zombie extends Character implements IWalkingCharacter {
     int direction;
+    private int health;
 
     public Zombie(int direction, boolean player, String sprite) {
         super(new Sprite(sprite), direction, player);
@@ -22,6 +23,7 @@ public class Zombie extends Character {
 //        System.out.println("Doet iets");
 //    }
 //
+    @Override
     public void attack() {
         setxSpeed(0);
     }
