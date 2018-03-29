@@ -9,8 +9,8 @@ public class Zombie extends Character implements IWalkingCharacter {
     int direction;
     private int health;
 
-    public Zombie(int direction, boolean player, String sprite) {
-        super(new Sprite(sprite), direction, player);
+    public Zombie(int direction, String sprite) {
+        super(new Sprite(sprite), direction);
     }
 
     @Override
@@ -26,5 +26,6 @@ public class Zombie extends Character implements IWalkingCharacter {
     @Override
     public void attack() {
         setxSpeed(0);
+
     }
 }

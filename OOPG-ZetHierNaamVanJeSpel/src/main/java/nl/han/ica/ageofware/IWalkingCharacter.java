@@ -2,7 +2,7 @@ package nl.han.ica.ageofware;
 
 public interface IWalkingCharacter {
 
-    private int health, returnMoney;
+    //private int health, returnMoney;
 
 
 }
