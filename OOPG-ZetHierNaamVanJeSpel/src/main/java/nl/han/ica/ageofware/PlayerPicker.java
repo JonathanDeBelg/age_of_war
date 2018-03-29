@@ -3,10 +3,10 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import processing.core.PGraphics;
 
+import javax.xml.stream.events.Characters;
 import java.util.ArrayList;
-import java.util.List;
 
-public class PlayerPicker extends GameObject {
+public class PlayerPicker extends GameObject{
 
     private AgeOfWar aow;
     private int xPos;
@@ -18,7 +18,7 @@ public class PlayerPicker extends GameObject {
         this.aow = aow;
         xPos = 25;
         yPos = 615;
-        characters = new ArrayList<>();
+        characters = new ArrayList<Character>();
     }
 
     @Override
@@ -44,10 +44,6 @@ public class PlayerPicker extends GameObject {
         }
     }
 
-    public ArrayList<Character> getCharacters() {
-        return characters;
-    }
-
     private void generatePlayer(int keyCode){
         Character c = new Zombie(1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
         if (keyCode == 49) {
@@ -60,9 +56,17 @@ public class PlayerPicker extends GameObject {
             System.out.println("RIDDER");
         }
         characters.add(c);
-        System.out.println(characters);
-
-
+        addCharacterToList(characters);
+        //System.out.println(characters);
         aow.addGameObject(c, xPos, yPos);
+    }
+
+    private void addCharacterToList(ArrayList<Character> characters) {
+        for (Character c: characters) {
+            if(c instanceof Character) {
+                Character o = (Character) c;
+                o.addFriends(o);
+            }
+        }
     }
 }

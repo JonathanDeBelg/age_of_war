@@ -15,32 +15,39 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private int size = 25;
     private Sprite sprite;
     private int direction;
-    AgeOfWar aow;
-    private PlayerPicker p = new PlayerPicker(aow);
+    private ArrayList<Character> friends;
+
 
     public Character(Sprite sprite, int direction){
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
         setxSpeed(direction);
+        friends = new ArrayList<Character>();
     }
+
 
     @Override
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object: collidedGameObjects) {
             if(object instanceof Character) {
                 Character c = (Character) object;
+                System.out.println(friends);
                 if(!isFriend(c)){
                     setxSpeed(0);
                     //attack();
                 }
             }
+
         }
     }
 
+    public void addFriends(Character character){
+        friends.add(character);
+    }
+
     private boolean isFriend(Character character){
-        System.out.println(p.getCharacters());
-        return p.getCharacters().contains(character);
+        return friends.contains(character);
     }
 
     @Override
