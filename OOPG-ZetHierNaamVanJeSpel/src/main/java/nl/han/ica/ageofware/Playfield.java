@@ -13,15 +13,9 @@ import java.util.TimerTask;
 public class Playfield extends Timer{
     AgeOfWar aow;
     RandomNPCPicker randomPicker;
-
-    ArrayList<Character> players;
-    ArrayList<Character> npcs;
-
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
         aow.addGameObject(new PlayerPicker(aow));
-        players = new ArrayList<Character>();
-        npcs = new ArrayList<Character>();
         randomPicker = new RandomNPCPicker(aow);
     }
 
@@ -41,6 +35,7 @@ public class Playfield extends Timer{
         timer.schedule(tasknew, 0, 2500);
 
     }
+
     public void generateCharacter(){
     }
 }

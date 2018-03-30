@@ -1,55 +1,54 @@
 package nl.han.ica.ageofware;
 
 import nl.han.ica.OOPDProcessingEngineHAN.Collision.ICollidableWithGameObjects;
-import nl.han.ica.OOPDProcessingEngineHAN.Objects.AnimatedSpriteObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
-import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IMouseInput;
-import nl.han.ica.waterworld.Player;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Character extends SpriteObject implements ICollidableWithGameObjects{
+public abstract class Character extends SpriteObject implements ICollidableWithGameObjects {
     private int cost, damage;
     private int x = 0;
     private int y = 255;
     private int size = 25;
     private Sprite sprite;
     private int direction;
-    private PlayerPicker playerPicker;
+    private ArrayList<Character> friends;
+    private long prevMillis = 0;
     AgeOfWar aow;
 
-    public Character(Sprite sprite, int direction){
+    public Character(Sprite sprite, int direction) {
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
         setxSpeed(direction);
+        friends = new ArrayList<Character>();
     }
+
 
     @Override
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
-        for (GameObject object: collidedGameObjects) {
-            if(object instanceof Character) {
-                Character chararacter = (Character) object;
-                setxSpeed(0);
-                if(!isFriend(chararacter)){
-                    attack();
+        for (GameObject object : collidedGameObjects) {
+            if (object instanceof Character) {
+                Character c = (Character) object;
+//                System.out.println(collidedGameObjects);
+                if (!isFriend(c)) {
+                    setxSpeed(0);
+                    attack(c);
                 }
             }
+
         }
     }
 
-//    public void addFriends(Character character){
-//        this.friends.add(character);
-//    }
+    public void addFriends(Character character) {
+        friends.add(character);
+    }
 
-    private boolean isFriend(Character character){
-        playerPicker = new PlayerPicker(aow);
-        ArrayList<Character> characters = playerPicker.getCharacters();
-        System.out.println(characters);
-        return characters.contains(character);
+    private boolean isFriend(Character character) {
+        return friends.contains(character);
     }
 
     @Override
@@ -60,5 +59,24 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
     }
 
-    public abstract void attack();
+    public void attack(Character c) {
+        long currentMillis = System.currentTimeMillis();
+
+        if ((currentMillis - prevMillis) >= 2000) {
+            doDamage(c);
+            prevMillis = currentMillis;
+        }
+        if (getHealth() <= 0) {
+            die(c);
+            System.out.println("dood");
+        }
+    }
+
+    public void die(Character c) {
+        aow.deleteGameObject(c);
+    }
+
+    public abstract void doDamage(Character c);
+
+    public abstract int getHealth();
 }

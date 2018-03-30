@@ -8,6 +8,8 @@ import java.util.List;
 public class Zombie extends Character implements IWalkingCharacter {
     int direction;
     private int health = 100;
+    long prevMillis = 0;
+    AgeOfWar aow;
 
     public Zombie(int direction, String sprite) {
         super(new Sprite(sprite), direction);
@@ -18,26 +20,15 @@ public class Zombie extends Character implements IWalkingCharacter {
 //        System.out.println("Doet iets");
     }
 
+    @Override
+    public void doDamage(Character c) {
+        System.out.println("min 50 healht");
+        health -= 50;
+    }
 
+    @Override
     public int getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-//        @Override
-//    public void move() {
-//        System.out.println("Doet iets");
-////    }
-//
-    @Override
-   public void attack() {
-//        Character enemy =
-//        if(timer){
-//            if(character.isFriend())
-//            tegenstander.health -= 50;
-//        }
-    }
 }
