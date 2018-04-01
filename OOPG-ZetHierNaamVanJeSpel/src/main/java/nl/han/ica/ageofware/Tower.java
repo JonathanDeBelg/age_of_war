@@ -6,9 +6,12 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
 import processing.core.PGraphics;
 
+import javax.swing.*;
+
 public class Tower extends SpriteObject{
 
-    private int x, y, health, saldo;
+    private int x, y, health;
+    public int saldo = 1000;
     private AgeOfWar aow;
 
     public int getXpos() {
@@ -26,6 +29,7 @@ public class Tower extends SpriteObject{
         this.aow = aow;
 //        this.health = health;
 //        this.saldo = saldo;
+
     }
 
     /**
@@ -40,6 +44,12 @@ public class Tower extends SpriteObject{
     void drawTower(){
 
     }
+
+    public void saldoManager() {
+        saldo += 20;
+        aow.refreshDasboardText();
+    }
+
 
     @Override
     public void update() {

@@ -46,10 +46,12 @@ public class PlayerPicker extends GameObject{
 
     private void generatePlayer(int keyCode){
         Character c = new Zombie(1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
-        if (keyCode == 49) {
+        if (keyCode == 49) { //if (keyCode == 49 && player.getSaldo() >= 25) {
             c = new Zombie(1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
-        } else if (keyCode == 50) {
-            System.out.println("NINJA");
+//            player.setSaldo -= 25;
+        } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
+            c = new Ninja(1,"src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif");
+//            player.setSaldo -= 50;
         } else if (keyCode == 51) {
             System.out.println("Vogel");
         } else if (keyCode == 52) {

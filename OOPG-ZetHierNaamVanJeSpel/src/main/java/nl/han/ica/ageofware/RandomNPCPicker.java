@@ -21,18 +21,20 @@ public class RandomNPCPicker extends TimerTask{
         Random rand = new Random();
 
 
-        int randomCharacter = rand.nextInt(2) + 1;
+        int randomCharacter = rand.nextInt(5) + 1;
 
         Character c = new Zombie(-1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
         c.setDirection(360);
-        if (randomCharacter == 1) {
+        if (randomCharacter <= 4) {
             c = new Zombie((int) c.getDirection(),"src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif");
-            c.setDirectionSpeed((int) c.getDirection(), -1);
-            aow.addGameObject(c, aow.width - 200, aow.height - 135);
-            System.out.println("dingen");
+            System.out.println("zombie");
         } else {
-            System.out.println("andere dingen");
+            c = new Zombie((int) c.getDirection(),"src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif");
+            System.out.println("ninja");
         }
+
+        c.setDirectionSpeed((int) c.getDirection(), -1);
+        aow.addGameObject(c, aow.width - 100, aow.height - 135);
     }
 
     @Override
