@@ -67,8 +67,9 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             prevMillis = currentMillis;
         }
         if (getHealth() <= 0) {
-            die(c);
             System.out.println("dood");
+            die(c);
+
         }
     }
 
