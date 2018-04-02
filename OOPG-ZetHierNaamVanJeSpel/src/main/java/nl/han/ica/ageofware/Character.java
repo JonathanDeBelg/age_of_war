@@ -32,6 +32,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
+
                 Character c = (Character) object;
 //                System.out.println(collidedGameObjects);
                 if (!isFriend(c)) {
@@ -74,7 +75,8 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     public void die(Character c) {
-        aow.deleteGameObject(c);
+//        aow.deleteGameObject(c);
+        System.out.println("dood");
     }
 
     public abstract void doDamage(Character c);
