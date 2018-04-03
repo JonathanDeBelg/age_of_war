@@ -19,13 +19,18 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private long prevMillis = 0;
     AgeOfWar aow;
 
-    public Character(Sprite sprite, int direction, AgeOfWar aow) {
+    public Character(Sprite sprite, int direction, AgeOfWar aow, int cost) {
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
         setxSpeed(direction);
         friends = new ArrayList<Character>();
         this.aow = aow;
+        this.cost = cost;
+    }
+
+    public int getCost () {
+        return cost;
     }
 
 
@@ -33,9 +38,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
-
                 Character c = (Character) object;
-//                System.out.println(collidedGameObjects);
                 if (!isFriend(c)) {
                     setxSpeed(0);
                     attack(c);

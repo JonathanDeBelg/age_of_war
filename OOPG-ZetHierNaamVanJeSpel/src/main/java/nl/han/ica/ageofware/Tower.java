@@ -8,10 +8,10 @@ import processing.core.PGraphics;
 
 import javax.swing.*;
 
-public class Tower extends SpriteObject{
+public class Tower extends SpriteObject {
 
     private int x, y, health;
-    public int saldo = 1000;
+    public int saldo;
     private AgeOfWar aow;
 
     public int getXpos() {
@@ -27,9 +27,7 @@ public class Tower extends SpriteObject{
         this.x = x;
         this.y = y;
         this.aow = aow;
-//        this.health = health;
-//        this.saldo = saldo;
-
+        this.saldo = 1000;
     }
 
     /**
@@ -39,10 +37,6 @@ public class Tower extends SpriteObject{
      */
     private Tower(Sprite sprite) {
         super(sprite);
-    }
-
-    void drawTower(){
-
     }
 
     public void saldoManager() {

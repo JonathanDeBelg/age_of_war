@@ -14,7 +14,7 @@ public class AgeOfWar extends GameEngine {
     Playfield p = new Playfield(this);
     private TextObject dashboardText;
     private Sound gameSound;
-    private int saldo = 1000;
+    private int saldo;
 
 
     public static void main(String[] args){
@@ -25,9 +25,18 @@ public class AgeOfWar extends GameEngine {
     public void setupGame() {
         int worldWidth=1500;
         int worldHeight=750;
+        saldo = 50;
         createDashboard(worldWidth,100);
         createViewWithoutViewport(worldWidth, worldHeight);
         initializeSound();
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(int newSaldo) {
+        saldo = newSaldo;
     }
 
     private void initializeSound() {

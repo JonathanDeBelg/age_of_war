@@ -45,18 +45,26 @@ public class PlayerPicker extends GameObject{
     }
 
     private void generatePlayer(int keyCode){
-        Character c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1, aow);
-        if (keyCode == 49) { //if (keyCode == 49 && player.getSaldo() >= 25) {
-            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1 , aow);
-//            player.setSaldo -= 25;
+        Character c;
+        if (keyCode == 49) {
+            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1 , aow, 100);
+            if (c.getCost() <= aow.getSaldo()) {
+                addCharacter(c);
+                aow.setSaldo( aow.getSaldo() - c.getCost() );
+            } else {
+                System.out.println("Niet genoeg saldo!");
+            }
         } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
-            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow);
-//            player.setSaldo -= 50;
+            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow, 250);
         } else if (keyCode == 51) {
             System.out.println("Vogel");
         } else if (keyCode == 52) {
             System.out.println("RIDDER");
         }
+
+    }
+
+    private void addCharacter(Character c) {
         characters.add(c);
         addCharacterToList(characters);
         aow.addGameObject(c, xPos, yPos);
