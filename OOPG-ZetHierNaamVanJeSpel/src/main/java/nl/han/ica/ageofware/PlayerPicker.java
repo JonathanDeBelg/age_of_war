@@ -76,8 +76,8 @@ public class PlayerPicker extends GameObject{
     private void addCharacterToList(ArrayList<Character> characters) {
         for (Character c: characters) {
             if(c instanceof Character) {
-                Character o = (Character) c;
-                o.addFriends(o);
+                //Character o = (Character) c;
+                c.addFriends(c);
             }
         }
     }
