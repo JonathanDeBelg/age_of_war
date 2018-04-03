@@ -64,21 +64,21 @@ public class PlayerPicker extends GameObject{
         aow.addGameObject(c, xPos, yPos);
     }
 
-    private void checkSaldoOnPlayerSpawn(Character c){
-        if (c.getCost() <= aow.getSaldo()) {
-            addCharacter(c);
-            aow.setSaldo(c.getCost(), false);
-        } else {
-            System.out.println("Niet genoeg saldo!");
-        }
-    }
-
     private void addCharacterToList(ArrayList<Character> characters) {
         for (Character c: characters) {
             if(c instanceof Character) {
                 Character o = (Character) c;
                 o.addFriends(o);
             }
+        }
+    }
+
+    private void checkSaldoOnPlayerSpawn(Character c){
+        if (c.getCost() <= aow.getSaldo()) {
+            addCharacter(c);
+            aow.setSaldo(c.getCost(), false);
+        } else {
+            System.out.println("Niet genoeg saldo!");
         }
     }
 

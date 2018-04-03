@@ -40,9 +40,9 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
                 Character c = (Character) object;
-                if (!isFriend(c) || !isEnemy(c)) {
+                if (!isFriend(c)) {
                     setxSpeed(0);
-                    attack(c);
+//                    attack(c);
                 }
             }
         }
@@ -72,7 +72,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
     }
 
-    public void attack(Character c) {   
+    public void attack(Character c) {
         long currentMillis = System.currentTimeMillis();
 
         if ((currentMillis - prevMillis) >= 2000) {
