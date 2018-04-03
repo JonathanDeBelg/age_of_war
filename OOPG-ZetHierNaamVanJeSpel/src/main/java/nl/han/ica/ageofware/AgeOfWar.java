@@ -31,7 +31,7 @@ public class AgeOfWar extends GameEngine {
     }
 
     private void initializeSound() {
-        gameSound = new Sound(this, "src/main/java/nl/han/ica/ageofware/media/background-music.wav");
+        gameSound = new Sound(this, "src/main/java/nl/han/ica/ageofware/media/background-music.mp3");
         gameSound.loop(-1);
     }
 
