@@ -14,19 +14,20 @@ public class Zombie extends Character implements IWalkingCharacter {
         super(new Sprite(sprite), direction, aow);
     }
 
-    @Override
-    public void update() {
-//        System.out.println("Doet iets");
-    }
 
     @Override
     public void doDamage(Character c) {
-        health -= 20;
+        c.setHealth(40);
     }
 
     @Override
     public int getHealth() {
         return health;
+    }
+
+    @Override
+    public void setHealth(int health) {
+        this.health -= health;
     }
 
 }

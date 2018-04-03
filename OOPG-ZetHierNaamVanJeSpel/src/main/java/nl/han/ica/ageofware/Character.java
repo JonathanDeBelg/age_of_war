@@ -41,7 +41,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
                     attack(c);
                 }
             }
-
         }
     }
 
@@ -70,16 +69,12 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
         if (c.getHealth() <= 0) {
             die(c);
-            System.out.println("dood");
         }
     }
 
     public void die(Character c) {
         aow.deleteGameObject(c);
-        if (isFriend(c)) {
-            friends.remove(c);
-        }
-        System.out.println("dood");
+        friends.remove(c);
     }
 
     public abstract void doDamage(Character c);

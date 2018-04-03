@@ -13,7 +13,7 @@ public class Ninja extends Character implements IWalkingCharacter {
 
     @Override
     public void doDamage(Character c) {
-        c.setHealth() -= 40;
+        c.setHealth(40);
     }
 
     @Override
