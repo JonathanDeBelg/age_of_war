@@ -20,7 +20,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private long prevMillis = 0;
     AgeOfWar aow;
 
-    public Character(Sprite sprite, int direction, AgeOfWar aow) {
+    public Character(Sprite sprite, int direction, AgeOfWar aow, int cost) {
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
@@ -28,6 +28,11 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         friends = new ArrayList<Character>();
         enemies = new ArrayList<Character>();
         this.aow = aow;
+        this.cost = cost;
+    }
+
+    public int getCost () {
+        return cost;
     }
 
     @Override

@@ -10,10 +10,9 @@ public class Zombie extends Character implements IWalkingCharacter {
     private int health = 100;
     long prevMillis = 0;
 
-    public Zombie(String sprite, int direction, AgeOfWar aow) {
-        super(new Sprite(sprite), direction, aow);
+    public Zombie(String sprite, int direction, AgeOfWar aow, int cost) {
+        super(new Sprite(sprite), direction, aow, cost);
     }
-
 
     @Override
     public void doDamage(Character c) {
