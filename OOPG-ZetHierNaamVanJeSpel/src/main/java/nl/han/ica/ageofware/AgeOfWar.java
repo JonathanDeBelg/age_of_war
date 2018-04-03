@@ -3,6 +3,7 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Dashboard.Dashboard;
 import nl.han.ica.OOPDProcessingEngineHAN.Engine.GameEngine;
 import nl.han.ica.OOPDProcessingEngineHAN.Persistence.FilePersistence;
+import nl.han.ica.OOPDProcessingEngineHAN.Sound.Sound;
 import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IKeyInput;
 import nl.han.ica.OOPDProcessingEngineHAN.View.View;
 import nl.han.ica.waterworld.TextObject;
@@ -12,7 +13,8 @@ public class AgeOfWar extends GameEngine {
 
     Playfield p = new Playfield(this);
     private TextObject dashboardText;
-    int saldo = 1000;
+    private Sound gameSound;
+    private int saldo = 1000;
 
 
     public static void main(String[] args){
@@ -25,6 +27,12 @@ public class AgeOfWar extends GameEngine {
         int worldHeight=750;
         createDashboard(worldWidth,100);
         createViewWithoutViewport(worldWidth, worldHeight);
+        initializeSound();
+    }
+
+    private void initializeSound() {
+        gameSound = new Sound(this, "src/main/java/nl/han/ica/ageofware/media/background-music.wav");
+        gameSound.loop(-1);
     }
 
     private void createViewWithoutViewport(int screenWidth, int screenHeight) {
