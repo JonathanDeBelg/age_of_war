@@ -45,12 +45,12 @@ public class PlayerPicker extends GameObject{
     }
 
     private void generatePlayer(int keyCode){
-        Character c = new Zombie(1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
+        Character c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1, aow);
         if (keyCode == 49) { //if (keyCode == 49 && player.getSaldo() >= 25) {
-            c = new Zombie(1, "src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif");
+            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1 , aow);
 //            player.setSaldo -= 25;
         } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
-            c = new Ninja(1,"src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif");
+            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow);
 //            player.setSaldo -= 50;
         } else if (keyCode == 51) {
             System.out.println("Vogel");

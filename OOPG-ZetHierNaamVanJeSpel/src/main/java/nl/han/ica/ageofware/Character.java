@@ -19,12 +19,13 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private long prevMillis = 0;
     AgeOfWar aow;
 
-    public Character(Sprite sprite, int direction) {
+    public Character(Sprite sprite, int direction, AgeOfWar aow) {
         super(sprite);
         this.sprite = sprite;
         this.direction = direction;
         setxSpeed(direction);
         friends = new ArrayList<Character>();
+        this.aow = aow;
     }
 
 
@@ -67,18 +68,23 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             doDamage(c);
             prevMillis = currentMillis;
         }
-        if (getHealth() <= 0) {
+        if (c.getHealth() <= 0) {
             die(c);
             System.out.println("dood");
         }
     }
 
     public void die(Character c) {
-//        aow.deleteGameObject(c);
+        aow.deleteGameObject(c);
+        if (isFriend(c)) {
+            friends.remove(c);
+        }
         System.out.println("dood");
     }
 
     public abstract void doDamage(Character c);
 
     public abstract int getHealth();
+
+    public abstract void setHealth(int health);
 }
