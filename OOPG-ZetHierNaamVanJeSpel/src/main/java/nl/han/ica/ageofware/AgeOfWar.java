@@ -36,8 +36,12 @@ public class AgeOfWar extends GameEngine {
         return saldo;
     }
 
-    public void setSaldo(int newSaldo) {
-        saldo = newSaldo;
+    public void setSaldo(int newSaldo, boolean state) {
+        if(state){
+            saldo += newSaldo;
+        } else {
+            saldo -= newSaldo;
+        }
     }
 
     private void initializeSound() {

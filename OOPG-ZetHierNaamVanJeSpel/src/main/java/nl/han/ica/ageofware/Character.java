@@ -72,7 +72,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
     }
 
-    public void attack(Character c) {
+    public void attack(Character c) {   
         long currentMillis = System.currentTimeMillis();
 
         if ((currentMillis - prevMillis) >= 2000) {
@@ -85,8 +85,10 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     public void die(Character c) {
+        returnMoneyOnDie();
         aow.deleteGameObject(c);
         friends.remove(c);
+        System.out.println("Nieuwe saldo: " + aow.getSaldo());
     }
 
     public abstract void doDamage(Character c);
@@ -94,4 +96,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public abstract int getHealth();
 
     public abstract void setHealth(int health);
+
+    public abstract void returnMoneyOnDie();
 }

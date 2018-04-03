@@ -67,7 +67,7 @@ public class PlayerPicker extends GameObject{
     private void checkSaldoOnPlayerSpawn(Character c){
         if (c.getCost() <= aow.getSaldo()) {
             addCharacter(c);
-            aow.setSaldo(aow.getSaldo() - c.getCost());
+            aow.setSaldo(c.getCost(), false);
         } else {
             System.out.println("Niet genoeg saldo!");
         }

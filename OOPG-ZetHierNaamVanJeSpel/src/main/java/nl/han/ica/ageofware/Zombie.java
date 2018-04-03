@@ -9,6 +9,7 @@ public class Zombie extends Character implements IWalkingCharacter {
     int direction;
     private int health = 100;
     long prevMillis = 0;
+    private int returnMoney = 75;
 
     public Zombie(String sprite, int direction, AgeOfWar aow, int cost) {
         super(new Sprite(sprite), direction, aow, cost);
@@ -27,6 +28,11 @@ public class Zombie extends Character implements IWalkingCharacter {
     @Override
     public void setHealth(int health) {
         this.health -= health;
+    }
+
+    @Override
+    public void returnMoneyOnDie() {
+        aow.setSaldo(returnMoney, true);
     }
 
 }

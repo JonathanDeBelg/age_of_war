@@ -5,6 +5,7 @@ import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 public class Ninja extends Character implements IWalkingCharacter {
 
     private int health = 125;
+    private int returnMoney = 100;
 
     public Ninja(String sprite, int direction, AgeOfWar aow, int cost) {
         super(new Sprite(sprite), direction, aow, 250);
@@ -24,5 +25,10 @@ public class Ninja extends Character implements IWalkingCharacter {
     @Override
     public void setHealth(int health) {
         this.health -= health;
+    }
+
+    @Override
+    public void returnMoneyOnDie() {
+        aow.setSaldo(returnMoney, true);
     }
 }
