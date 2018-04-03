@@ -25,7 +25,8 @@ public class AgeOfWar extends GameEngine {
     public void setupGame() {
         int worldWidth=1500;
         int worldHeight=750;
-        saldo = 50;
+        saldo = 500;
+
         createDashboard(worldWidth,100);
         createViewWithoutViewport(worldWidth, worldHeight);
         initializeSound();

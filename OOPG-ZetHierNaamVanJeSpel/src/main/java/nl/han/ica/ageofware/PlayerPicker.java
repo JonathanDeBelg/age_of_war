@@ -13,12 +13,14 @@ public class PlayerPicker extends GameObject{
     private int yPos;
     private long prevMillis = 0;
     private ArrayList<Character> characters;
+    long startTijd;
 
     public PlayerPicker(AgeOfWar aow) {
         this.aow = aow;
         xPos = 25;
         yPos = 615;
         characters = new ArrayList<Character>();
+        startTijd = System.currentTimeMillis() - 2500;
     }
 
     @Override
@@ -34,40 +36,41 @@ public class PlayerPicker extends GameObject{
     }
 
     private void spawnPlayer(int keyCode) {
-        long currentMillis = System.currentTimeMillis();
-
-        if ((currentMillis - prevMillis) >= 2500){
-            generatePlayer(keyCode);
-            prevMillis = currentMillis;
-        } else {
-            System.out.println("De timer is nog niet voorbij");
-        }
+        generatePlayer(keyCode);
+        System.out.println(aow.getSaldo());
     }
 
     private void generatePlayer(int keyCode){
         Character c;
-        if (keyCode == 49) {
-            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif",1 , aow, 100);
-            if (c.getCost() <= aow.getSaldo()) {
-                addCharacter(c);
-                aow.setSaldo( aow.getSaldo() - c.getCost() );
-            } else {
-                System.out.println("Niet genoeg saldo!");
+        if (tijdVoorbij(startTijd, 2500)) {
+            if (keyCode == 49) {
+                c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
+                checkSaldoOnPlayerSpawn(c);
+            } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
+                c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow, 250);
+                checkSaldoOnPlayerSpawn(c);
+            } else if (keyCode == 51) {
+                System.out.println("Vogel");
+            } else if (keyCode == 52) {
+                System.out.println("RIDDER");
             }
-        } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
-            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow, 250);
-        } else if (keyCode == 51) {
-            System.out.println("Vogel");
-        } else if (keyCode == 52) {
-            System.out.println("RIDDER");
+            startTijd = System.currentTimeMillis();
         }
-
     }
 
     private void addCharacter(Character c) {
         characters.add(c);
         addCharacterToList(characters);
         aow.addGameObject(c, xPos, yPos);
+    }
+
+    private void checkSaldoOnPlayerSpawn(Character c){
+        if (c.getCost() <= aow.getSaldo()) {
+            addCharacter(c);
+            aow.setSaldo(aow.getSaldo() - c.getCost());
+        } else {
+            System.out.println("Niet genoeg saldo!");
+        }
     }
 
     private void addCharacterToList(ArrayList<Character> characters) {
@@ -77,6 +80,10 @@ public class PlayerPicker extends GameObject{
                 o.addFriends(o);
             }
         }
+    }
+
+    private boolean tijdVoorbij(long startTijd, int interval){
+        return System.currentTimeMillis() - startTijd >= interval;
     }
 
     public void die(Character c){
