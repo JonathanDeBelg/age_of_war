@@ -16,6 +16,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     private Sprite sprite;
     private int direction;
     private ArrayList<Character> friends;
+    private ArrayList<Character> enemies;
     private long prevMillis = 0;
     AgeOfWar aow;
 
@@ -25,18 +26,16 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         this.direction = direction;
         setxSpeed(direction);
         friends = new ArrayList<Character>();
+        enemies = new ArrayList<Character>();
         this.aow = aow;
     }
-
 
     @Override
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
-
                 Character c = (Character) object;
-//                System.out.println(collidedGameObjects);
-                if (!isFriend(c)) {
+                if (!isFriend(c) || !isEnemy(c)) {
                     setxSpeed(0);
                     attack(c);
                 }
@@ -48,8 +47,16 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         friends.add(character);
     }
 
+    public void addEnemy(Character character) {
+        enemies.add(character);
+    }
+
     private boolean isFriend(Character character) {
         return friends.contains(character);
+    }
+
+    private boolean isEnemy(Character character) {
+        return enemies.contains(character);
     }
 
     @Override

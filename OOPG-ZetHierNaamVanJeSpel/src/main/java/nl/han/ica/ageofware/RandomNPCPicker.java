@@ -11,10 +11,12 @@ import java.util.ArrayList;
 public class RandomNPCPicker extends TimerTask{
     Timer timer;
     private AgeOfWar aow;
+    private ArrayList<Character> characters;
 
     public RandomNPCPicker(AgeOfWar aow){
         this.aow = aow;
         timer =  new Timer();
+        characters = new ArrayList<Character>();
     }
 
     public void generateRandomNPC(){
@@ -32,9 +34,19 @@ public class RandomNPCPicker extends TimerTask{
             c = new Zombie("src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif", (int)c.getDirection(), aow);
             System.out.println("ninja");
         }
-
+        characters.add(c);
+        addCharacterToList(characters);
         c.setDirectionSpeed((int) c.getDirection(), -1);
         aow.addGameObject(c, aow.width - 100, aow.height - 135);
+    }
+
+    private void addCharacterToList(ArrayList<Character> characters) {
+        for (Character c: characters) {
+            if(c instanceof Character) {
+                Character o = (Character) c;
+                o.addFriends(o);
+            }
+        }
     }
 
     @Override

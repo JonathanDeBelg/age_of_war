@@ -7,6 +7,7 @@ import nl.han.ica.waterworld.Player;
 import processing.core.PGraphics;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -26,13 +27,16 @@ public class Playfield extends Timer{
         Tower user = new Tower(aow, 0, aow.height - 255);
         Tower computer = new Tower(aow, aow.width-100, aow.height - 255);
 
+        Random rand = new Random();
+
+        int randomCharacterSpawnTime = rand.nextInt(50 + 1 - 25) + 25;
         aow.addGameObject(user, user.getXpos(), user.getYpos());
         aow.addGameObject(computer, computer.getXpos(), computer.getYpos());
 
         Timer timer = new Timer();
         TimerTask tasknew = new RandomNPCPicker(aow);
 
-        timer.schedule(tasknew, 0, 2500);
+        timer.schedule(tasknew, 0, (randomCharacterSpawnTime * 100));
 
     }
 
