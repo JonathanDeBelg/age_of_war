@@ -71,7 +71,7 @@ public class AgeOfWar extends GameEngine {
     }
 
     public void refreshDasboardText() {
-        dashboardText.setText("Saldo: "+saldo);
+        dashboardText.setText("Saldo: " + getSaldo());
     }
 
 

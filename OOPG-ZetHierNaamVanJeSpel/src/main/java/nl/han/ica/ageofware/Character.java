@@ -29,6 +29,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         enemies = new ArrayList<Character>();
         this.aow = aow;
         this.cost = cost;
+        
     }
 
     public int getCost () {
@@ -44,9 +45,11 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
                     if(!isFriend(c)) {
                         setxSpeed(0);
                         attack(c);
+                        if (c.getHealth() <= 0) {
+                            returnMoneyOnDie();
+//                            aow.refreshDasboardText();
+                        }
                     }
-
-                    //attack(c);
                 } else {
                     if(!isEnemy(c)) {
                         setxSpeed(0);
@@ -80,6 +83,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             //commentaar
         }
         setxSpeed(direction);
+        aow.refreshDasboardText();
     }
 
     public void attack(Character c) {
@@ -95,7 +99,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     public void die(Character c) {
-        returnMoneyOnDie();
         aow.deleteGameObject(c);
         friends.remove(c);
         System.out.println("Nieuwe saldo: " + aow.getSaldo());
