@@ -47,7 +47,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
                     }
 
                     //attack(c);
-                } else if(enemies.size() > 0) {
+                } else {
                     if(!isEnemy(c)) {
                         setxSpeed(0);
                         attack(c);
