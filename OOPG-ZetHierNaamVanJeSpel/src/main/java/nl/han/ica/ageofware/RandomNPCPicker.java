@@ -26,11 +26,11 @@ public class RandomNPCPicker extends TimerTask{
         Character c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100);
         c.setDirection(360);
         if (randomCharacter <= 4) {
-            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",(int)c.getDirection(), aow, 100);
+            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100);
             System.out.println("zombie");
             addCharacter(c);
         } else {
-            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif", (int)c.getDirection(), aow, 250);
+            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif", -1, aow, 250);
             System.out.println("ninja");
             addCharacter(c);
         }
@@ -46,8 +46,8 @@ public class RandomNPCPicker extends TimerTask{
     private void addCharacterToList(ArrayList<Character> characters) {
         for (Character c: characters) {
             if(c instanceof Character) {
-                Character o = (Character) c;
-                o.addFriends(o);
+                //Character o = (Character) c;
+                c.addEnemy(c);
             }
         }
     }

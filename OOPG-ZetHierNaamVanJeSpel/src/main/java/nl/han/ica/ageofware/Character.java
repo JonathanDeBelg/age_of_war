@@ -40,9 +40,18 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
                 Character c = (Character) object;
-                if (!isFriend(c)) {
-                    setxSpeed(0);
-//                    attack(c);
+                if ( (friends.size() > 0) ) {
+                    if(!isFriend(c)) {
+                        setxSpeed(0);
+                        attack(c);
+                    }
+
+                    //attack(c);
+                } else if(enemies.size() > 0) {
+                    if(!isEnemy(c)) {
+                        setxSpeed(0);
+                        attack(c);
+                    }
                 }
             }
         }
@@ -70,6 +79,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
             setX(1500);
             //commentaar
         }
+        setxSpeed(direction);
     }
 
     public void attack(Character c) {
