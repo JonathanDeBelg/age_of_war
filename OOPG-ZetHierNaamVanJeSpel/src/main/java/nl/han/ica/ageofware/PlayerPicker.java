@@ -60,15 +60,15 @@ public class PlayerPicker extends GameObject{
 
     private void addCharacter(Character c) {
         characters.add(c);
-        addCharacterToList(characters);
+        addCharacterToList(characters, c);
         aow.addGameObject(c, xPos, yPos);
     }
 
-    private void addCharacterToList(ArrayList<Character> characters) {
+    private void addCharacterToList(ArrayList<Character> characters, Character character) {
+
         for (Character c: characters) {
             if(c instanceof Character) {
-                //Character o = (Character) c;
-                c.addFriends(c);
+                c.addFriends(character);
             }
         }
     }

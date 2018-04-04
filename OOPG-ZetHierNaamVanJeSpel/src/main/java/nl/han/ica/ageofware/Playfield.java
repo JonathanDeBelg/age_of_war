@@ -14,8 +14,8 @@ import java.util.TimerTask;
 public class Playfield extends Timer{
     AgeOfWar aow;
     RandomNPCPicker randomPicker;
-    private int timerMin = 35;
-    private int timerMax = 75;
+    private int timerMin = 10;
+    private int timerMax = 11;
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
         aow.addGameObject(new PlayerPicker(aow));

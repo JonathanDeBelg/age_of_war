@@ -39,17 +39,20 @@ public class RandomNPCPicker extends TimerTask{
 
     private void addCharacter(Character c) {
         characters.add(c);
-        addCharacterToList(characters);
+        addCharacterToList(characters, c);
+        c.setDirectionSpeed((int) c.getDirection(), -1);
+
         aow.addGameObject(c, aow.width - 100, aow.height - 135);
     }
 
-    private void addCharacterToList(ArrayList<Character> characters) {
+    private void addCharacterToList(ArrayList<Character> characters, Character character) {
         for (Character c: characters) {
             if(c instanceof Character) {
                 //Character o = (Character) c;
-                c.addEnemy(c);
+                c.addFriends(character);
             }
         }
+
     }
 
     @Override
