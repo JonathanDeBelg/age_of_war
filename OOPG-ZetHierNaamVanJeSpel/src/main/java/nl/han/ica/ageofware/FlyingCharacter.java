@@ -8,5 +8,5 @@ public abstract class FlyingCharacter extends Character {
     }
 
     @Override
-    public abstract void doDamage(Character c);
+    public abstract void doDamage(WalkingCharacters c);
 }

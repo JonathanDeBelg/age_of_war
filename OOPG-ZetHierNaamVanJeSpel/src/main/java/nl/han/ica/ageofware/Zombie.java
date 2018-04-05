@@ -13,8 +13,8 @@ public class Zombie extends WalkingCharacters {
     }
 
     @Override
-    public void doDamage(Character c) {
-        //c.setHealth(40);
+    public void doDamage(WalkingCharacters c) {
+        c.setHealth(40);
     }
 
     @Override

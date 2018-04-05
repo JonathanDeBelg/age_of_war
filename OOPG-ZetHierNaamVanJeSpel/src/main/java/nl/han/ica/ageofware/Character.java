@@ -88,7 +88,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         long currentMillis = System.currentTimeMillis();
         WalkingCharacters o = (WalkingCharacters) c;
         if ((currentMillis - prevMillis) >= 2000) {
-            doDamage(c);
+            doDamage(o);
             prevMillis = currentMillis;
         }
         if ( o.getHealth() <= 0) {
@@ -120,5 +120,5 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         setxSpeed(direction);
     }
 
-    public abstract void doDamage(Character c);
+    public abstract void doDamage(WalkingCharacters c);
 }

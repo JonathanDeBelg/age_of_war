@@ -8,7 +8,7 @@ public class Bird extends FlyingCharacter {
     }
 
     @Override
-    public void doDamage(Character c) {
+    public void doDamage(WalkingCharacters c) {
 
     }
 }

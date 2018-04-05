@@ -8,7 +8,7 @@ public abstract class WalkingCharacters extends Character {
     }
 
     @Override
-    public abstract void doDamage(Character c);
+    public abstract void doDamage(WalkingCharacters c);
 
     public abstract int getHealth();
 
