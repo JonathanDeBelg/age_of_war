@@ -10,8 +10,8 @@ import java.util.List;
 
 public abstract class Character extends SpriteObject implements ICollidableWithGameObjects {
     private int cost, damage;
-    private int x = 20;
-    private int y = 255;
+//    private int x = 20;
+//    private int y = 255;
     private int size = 25;
     private Sprite sprite;
     private int direction;
@@ -29,7 +29,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         enemies = new ArrayList<Character>();
         this.aow = aow;
         this.cost = cost;
-        
     }
 
     public int getCost () {
@@ -39,7 +38,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     @Override
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object : collidedGameObjects) {
-            if (object instanceof Character) {
+            if (object instanceof WalkingCharacters) {
                 characterAttack(object);
             } else if(object instanceof Tower) {
                 Tower t = (Tower) object;
@@ -50,12 +49,13 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     private void characterAttack(GameObject object) {
-        Character c = (Character) object;
+
+        WalkingCharacters c = (WalkingCharacters) object;
         if(!isFriend(c)) {
             setxSpeed(0);
             attack(c);
             if (c.getHealth() <= 0) {
-                returnMoneyOnDie();
+                c.returnMoneyOnDie();
             }
         }
     }
@@ -66,7 +66,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     private boolean isFriend(Character character) {
-        if(this.friends.contains(character)) {
+        if(friends.contains(character)) {
             return true;
         } else {
             return false;
@@ -86,12 +86,12 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
 
     private void attack(Character c) {
         long currentMillis = System.currentTimeMillis();
-
+        WalkingCharacters o = (WalkingCharacters) c;
         if ((currentMillis - prevMillis) >= 2000) {
             doDamage(c);
             prevMillis = currentMillis;
         }
-        if (c.getHealth() <= 0) {
+        if ( o.getHealth() <= 0) {
             die(c);
         }
     }
@@ -121,10 +121,4 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     public abstract void doDamage(Character c);
-
-    public abstract int getHealth();
-
-    public abstract void setHealth(int health);
-
-    public abstract void returnMoneyOnDie();
 }

@@ -17,8 +17,9 @@ public class PlayerPicker extends GameObject implements CharacterFactory {
 
     public PlayerPicker(AgeOfWar aow) {
         this.aow = aow;
-        xPos = 105;
-        yPos = 615;
+        setX(105);
+        //xPos = 105;
+        //yPos = 615;
         characters = new ArrayList<Character>();
         startTijd = System.currentTimeMillis() - 2500;
     }
@@ -41,19 +42,16 @@ public class PlayerPicker extends GameObject implements CharacterFactory {
     }
 
     private void generatePlayer(int keyCode){
-        Character c;
         System.out.println(keyCode);
         if (tijdVoorbij(startTijd, 2500)) {
             if (keyCode == 49) {
-                c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
+                WalkingCharacters c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
                 checkSaldoOnPlayerSpawn(c);
             } else if (keyCode == 50) { //} else if (keyCode == 50 && player.getSaldo() >= 50) {
-                c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow, 250);
+                WalkingCharacters c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack.gif", 1, aow, 250);
                 checkSaldoOnPlayerSpawn(c);
             } else if (keyCode == 51) {
-                System.out.println("Vogel");
-            } else if (keyCode == 52) {
-                c = new Ridder("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
+                FlyingCharacter c = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", 1, aow, 50);
                 checkSaldoOnPlayerSpawn(c);
             }
         }
@@ -61,9 +59,15 @@ public class PlayerPicker extends GameObject implements CharacterFactory {
 
     @Override
     public void addCharacter(Character c) {
+        if(c instanceof WalkingCharacters) {
+            setY(615);
+        } else {
+            setY(200);
+        }
         characters.add(c);
         addCharacterToList(characters, c);
-        aow.addGameObject(c, xPos, yPos);
+        System.out.println(getY());
+        aow.addGameObject(c, getX(), getY());
         startTijd = System.currentTimeMillis();
     }
 

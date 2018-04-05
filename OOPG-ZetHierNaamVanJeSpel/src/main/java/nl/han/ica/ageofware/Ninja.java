@@ -2,7 +2,7 @@ package nl.han.ica.ageofware;
 
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
-public class Ninja extends Character {
+public class Ninja extends WalkingCharacters {
 
     private int health = 125;
     private int returnMoney = 100;
@@ -14,7 +14,7 @@ public class Ninja extends Character {
 
     @Override
     public void doDamage(Character c) {
-        c.setHealth(40);
+        //c.setHealth(40);
     }
 
     @Override
