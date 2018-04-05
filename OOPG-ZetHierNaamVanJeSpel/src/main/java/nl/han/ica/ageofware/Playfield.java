@@ -10,11 +10,15 @@ import java.util.TimerTask;
 public class Playfield extends Timer{
     AgeOfWar aow;
     CharacterFactory randomPicker;
-    private int timerMin = 70;
-    private int timerMax = 80;
+    private int timerMin = 10;
+    private int timerMax = 20;
     Tower user;
     Tower computer;
 
+    /**
+     * Constructor
+     * @param aow het spel
+     */
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
         aow.addGameObject(new PlayerPicker(aow));
@@ -39,9 +43,6 @@ public class Playfield extends Timer{
 
         timer.schedule(tasknew, 0, (randomCharacterSpawnTime * 100));
 
-    }
-
-    public void generateCharacter(){
     }
 
     public void towerPlayerHealthGenerator(int dashboardWidth, int dashboardHeight){

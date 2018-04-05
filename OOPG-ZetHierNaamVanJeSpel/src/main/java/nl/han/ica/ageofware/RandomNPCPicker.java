@@ -11,35 +11,46 @@ public class RandomNPCPicker extends TimerTask implements CharacterFactory{
     private AgeOfWar aow;
     private ArrayList<Character> characters;
 
+    /**
+     * Constructor
+     * @param aow het spel
+     */
     public RandomNPCPicker(AgeOfWar aow){
         this.aow = aow;
         timer =  new Timer();
         characters = new ArrayList<Character>();
     }
 
+    /**
+     * Genereert de random NPC
+     */
     public void generateRandomNPC(){
         Random rand = new Random();
         int randomCharacter = rand.nextInt(20) + 1;
-        WalkingCharacters c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100);
-        FlyingCharacter fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", -1, aow, 500);
+        WalkingCharacters c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100, "Enemy");
+        FlyingCharacter fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", -1, aow, 500,"Enemy");
         if (randomCharacter <= 14) {
-            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100);
+            c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-npc.gif",-1, aow, 100, "Enemy");
             System.out.println("zombie");
             setCharacterStats(c);
             addCharacter(c);
         } else if(randomCharacter > 14 && randomCharacter < 19 ) {
-            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif", -1, aow, 250);
+            c = new Ninja("src/main/java/nl/han/ica/ageofware/media/ninja-attack-npc.gif", -1, aow, 250, "Enemy");
             System.out.println("ninja");
             setCharacterStats(c);
             addCharacter(c);
         } else if(randomCharacter == 20) {
-            fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", -1, aow, 500);
+            fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", -1, aow, 500, "Enemy");
             System.out.println("ninja");
             setCharacterStats(fc);
             addCharacter(fc);
         }
     }
 
+    /**
+     * Zet de positie en richting van de Character
+     * @param c de character
+     */
     private void setCharacterStats(Character c) {
         c.setX(1200);
         c.setDirection(270);
@@ -64,8 +75,7 @@ public class RandomNPCPicker extends TimerTask implements CharacterFactory{
     public void addCharacterToList(ArrayList<Character> characters, Character character) {
         for (Character c: characters) {
             if(c instanceof Character) {
-                //Character o = (Character) c;
-                c.addFriends(character);
+                c.setFriends(characters);
             }
         }
 

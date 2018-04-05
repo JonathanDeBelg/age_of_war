@@ -7,9 +7,24 @@ public class Zombie extends WalkingCharacters {
     private int health = 100;
     long prevMillis = 0;
     private int returnMoney = 75;
+    String tekst;
 
-    public Zombie(String sprite, int direction, AgeOfWar aow, int cost) {
+    /**
+     * Constructor
+     * @param sprite de sprite
+     * @param direction de richting van de character
+     * @param aow het spel
+     * @param cost de prijs van de character
+     * @param tekst een relevante tekst voor de character
+     */
+    public Zombie(String sprite, int direction, AgeOfWar aow, int cost, String tekst) {
         super(new Sprite(sprite), direction, aow, cost);
+        this.tekst = tekst;
+    }
+
+    @Override
+    public String toString() {
+        return tekst;
     }
 
     @Override
