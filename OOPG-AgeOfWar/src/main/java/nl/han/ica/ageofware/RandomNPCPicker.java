@@ -40,7 +40,7 @@ public class RandomNPCPicker extends TimerTask implements CharacterFactory{
             setCharacterStats(c);
             addCharacter(c);
         } else if(randomCharacter == 20) {
-            fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird.gif", -1, aow, 500, "Enemy");
+            fc = new Bird("src/main/java/nl/han/ica/ageofware/media/bird-npc.gif", -1, aow, 500, "Enemy");
             System.out.println("ninja");
             setCharacterStats(fc);
             addCharacter(fc);
