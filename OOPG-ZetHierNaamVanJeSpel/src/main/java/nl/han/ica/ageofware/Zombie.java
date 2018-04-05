@@ -1,11 +1,8 @@
 package nl.han.ica.ageofware;
 
-import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
-import java.util.List;
-
-public class Zombie extends Character implements IWalkingCharacter {
+public class Zombie extends Character {
     int direction;
     private int health = 100;
     long prevMillis = 0;

@@ -14,13 +14,7 @@ public class Tower extends SpriteObject {
     public int saldo;
     private AgeOfWar aow;
 
-    public int getXpos() {
-        return x;
-    }
 
-    public int getYpos() {
-        return y;
-    }
 
     public Tower(AgeOfWar aow, int x, int y) {
         this(new Sprite("src/main/java/nl/han/ica/ageofware/media/coffin.png"));
@@ -28,6 +22,24 @@ public class Tower extends SpriteObject {
         this.y = y;
         this.aow = aow;
         this.saldo = 1000;
+        this.health = 200;
+
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int hp) {
+        health = health - hp;
+    }
+
+    public int getXpos() {
+        return x;
+    }
+
+    public int getYpos() {
+        return y;
     }
 
     /**
@@ -39,10 +51,10 @@ public class Tower extends SpriteObject {
         super(sprite);
     }
 
-    public void saldoManager() {
-        saldo += 20;
-        aow.refreshDasboardText();
-    }
+//    public void saldoManager() {
+//        saldo += 20;
+//        aow.refreshDasboardText();
+//    }
 
 
     @Override

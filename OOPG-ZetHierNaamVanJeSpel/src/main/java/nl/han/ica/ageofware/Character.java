@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class Character extends SpriteObject implements ICollidableWithGameObjects {
     private int cost, damage;
-    private int x = 0;
+    private int x = 20;
     private int y = 255;
     private int size = 25;
     private Sprite sprite;
@@ -40,16 +40,22 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public void gameObjectCollisionOccurred(List<GameObject> collidedGameObjects) {
         for (GameObject object : collidedGameObjects) {
             if (object instanceof Character) {
-                Character c = (Character) object;
-                if(this.isFriend(c)) {
-                        //setxSpeed(direction);
-                } else {
-                    setxSpeed(0);
-                    attack(c);
-                    if (c.getHealth() <= 0) {
-                        returnMoneyOnDie();
-                    }
-                }
+                characterAttack(object);
+            } else if(object instanceof Tower) {
+                Tower t = (Tower) object;
+                setxSpeed(0);
+                attackTower(t);
+            }
+        }
+    }
+
+    private void characterAttack(GameObject object) {
+        Character c = (Character) object;
+        if(!isFriend(c)) {
+            setxSpeed(0);
+            attack(c);
+            if (c.getHealth() <= 0) {
+                returnMoneyOnDie();
             }
         }
     }
@@ -60,20 +66,25 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     }
 
     private boolean isFriend(Character character) {
-        return friends.contains(character);
+        if(this.friends.contains(character)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public void update() {
         if (getX() + getWidth() <= 0) {
             setX(1500);
-            //commentaar
+            die(this);
         }
         setxSpeed(direction);
+
         aow.refreshDasboardText();
     }
 
-    public void attack(Character c) {
+    private void attack(Character c) {
         long currentMillis = System.currentTimeMillis();
 
         if ((currentMillis - prevMillis) >= 2000) {
@@ -85,10 +96,28 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
     }
 
-    public void die(Character c) {
+    private void attackTower(Tower t) {
+        long currentMillis = System.currentTimeMillis();
+
+        if ((currentMillis - prevMillis) >= 2000) {
+            t.setHealth(40);
+            prevMillis = currentMillis;
+        }
+        if (t.getHealth() <= 0) {
+            aow.deleteGameObject(t);
+            System.out.println("De tower is verslagen");
+        }
+    }
+
+
+    private void die(Character c) {
         aow.deleteGameObject(c);
         friends.remove(c);
         System.out.println("Nieuwe saldo: " + aow.getSaldo());
+    }
+
+    private void walk() {
+        setxSpeed(direction);
     }
 
     public abstract void doDamage(Character c);

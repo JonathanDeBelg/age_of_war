@@ -6,7 +6,7 @@ import processing.core.PGraphics;
 import javax.xml.stream.events.Characters;
 import java.util.ArrayList;
 
-public class PlayerPicker extends GameObject{
+public class PlayerPicker extends GameObject implements CharacterFactory {
 
     private AgeOfWar aow;
     private int xPos;
@@ -17,7 +17,7 @@ public class PlayerPicker extends GameObject{
 
     public PlayerPicker(AgeOfWar aow) {
         this.aow = aow;
-        xPos = 25;
+        xPos = 105;
         yPos = 615;
         characters = new ArrayList<Character>();
         startTijd = System.currentTimeMillis() - 2500;
@@ -42,6 +42,7 @@ public class PlayerPicker extends GameObject{
 
     private void generatePlayer(int keyCode){
         Character c;
+        System.out.println(keyCode);
         if (tijdVoorbij(startTijd, 2500)) {
             if (keyCode == 49) {
                 c = new Zombie("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
@@ -52,19 +53,22 @@ public class PlayerPicker extends GameObject{
             } else if (keyCode == 51) {
                 System.out.println("Vogel");
             } else if (keyCode == 52) {
-                System.out.println("RIDDER");
+                c = new Ridder("src/main/java/nl/han/ica/ageofware/media/zombie-attack-test.gif", 1, aow, 100);
+                checkSaldoOnPlayerSpawn(c);
             }
-            startTijd = System.currentTimeMillis();
         }
     }
 
-    private void addCharacter(Character c) {
+    @Override
+    public void addCharacter(Character c) {
         characters.add(c);
         addCharacterToList(characters, c);
         aow.addGameObject(c, xPos, yPos);
+        startTijd = System.currentTimeMillis();
     }
 
-    private void addCharacterToList(ArrayList<Character> characters, Character character) {
+    @Override
+    public void addCharacterToList(ArrayList<Character> characters, Character character) {
 
         for (Character c: characters) {
             if(c instanceof Character) {

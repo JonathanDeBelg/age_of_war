@@ -1,21 +1,15 @@
 package nl.han.ica.ageofware;
 
-import nl.han.ica.OOPDProcessingEngineHAN.Engine.GameEngine;
-import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
-import nl.han.ica.OOPDProcessingEngineHAN.UserInput.IKeyInput;
-import nl.han.ica.waterworld.Player;
-import processing.core.PGraphics;
-
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Playfield extends Timer{
     AgeOfWar aow;
-    RandomNPCPicker randomPicker;
-    private int timerMin = 10;
-    private int timerMax = 11;
+    CharacterFactory randomPicker;
+    private int timerMin = 70;
+    private int timerMax = 80;
+
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
         aow.addGameObject(new PlayerPicker(aow));
