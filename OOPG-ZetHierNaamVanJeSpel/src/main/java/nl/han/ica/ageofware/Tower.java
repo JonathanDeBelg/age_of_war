@@ -4,6 +4,7 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.GameObject;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.SpriteObject;
+import nl.han.ica.waterworld.TextObject;
 import processing.core.PGraphics;
 
 import javax.swing.*;
@@ -13,6 +14,7 @@ public class Tower extends SpriteObject {
     private int x, y, health;
     public int saldo;
     private AgeOfWar aow;
+    private TextObject towerHealth;
 
 
     public Tower(AgeOfWar aow, int x, int y) {
@@ -50,14 +52,8 @@ public class Tower extends SpriteObject {
         super(sprite);
     }
 
-//    public void saldoManager() {
-//        saldo += 20;
-//        aow.refreshDasboardText();
-//    }
-
     @Override
     public void update() {
-//        System.out.println(getHealth());
-        aow.refreshTowerText();
+//        aow.refreshTowerText();
     }
 }

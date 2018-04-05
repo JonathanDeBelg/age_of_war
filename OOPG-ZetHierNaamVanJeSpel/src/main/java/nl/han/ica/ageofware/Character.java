@@ -10,8 +10,6 @@ import java.util.List;
 
 public abstract class Character extends SpriteObject implements ICollidableWithGameObjects {
     private int cost, damage;
-//    private int x = 20;
-//    private int y = 255;
     private int size = 25;
     private Sprite sprite;
     private int direction;
@@ -21,17 +19,17 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     AgeOfWar aow;
 
     public Character(Sprite sprite, int direction, AgeOfWar aow, int cost) {
-        super(sprite);
-        this.sprite = sprite;
-        this.direction = direction;
-        setxSpeed(direction);
-        friends = new ArrayList<Character>();
-        enemies = new ArrayList<Character>();
-        this.aow = aow;
+            super(sprite);
+            this.sprite = sprite;
+            this.direction = direction;
+            setxSpeed(direction);
+            friends = new ArrayList<Character>();
+            enemies = new ArrayList<Character>();
+            this.aow = aow;
         this.cost = cost;
     }
 
-    public int getCost () {
+    public int getCost() {
         return cost;
     }
 
@@ -105,11 +103,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         friends.remove(c);
         System.out.println("Nieuwe saldo: " + aow.getSaldo());
     }
-
-    private void walk() {
-        setxSpeed(direction);
-    }
-
 
     @Override
     public void update() {

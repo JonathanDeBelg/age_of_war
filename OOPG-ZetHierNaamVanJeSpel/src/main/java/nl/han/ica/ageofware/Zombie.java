@@ -3,10 +3,9 @@ package nl.han.ica.ageofware;
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
 public class Zombie extends WalkingCharacters {
-    int direction;
     private int health = 100;
-    long prevMillis = 0;
     private int returnMoney = 75;
+    private int damage = 40;
 
     public Zombie(String sprite, int direction, AgeOfWar aow, int cost) {
         super(new Sprite(sprite), direction, aow, cost);
@@ -14,7 +13,7 @@ public class Zombie extends WalkingCharacters {
 
     @Override
     public void doDamage(WalkingCharacters c) {
-        c.setHealth(40);
+        c.setHealth(damage);
     }
 
     @Override

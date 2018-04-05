@@ -93,8 +93,4 @@ public class PlayerPicker extends GameObject implements CharacterFactory {
     private boolean tijdVoorbij(long startTijd, int interval){
         return System.currentTimeMillis() - startTijd >= interval;
     }
-
-    public void die(Character c){
-        aow.deleteGameObject(c);
-    }
 }

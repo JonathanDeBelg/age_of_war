@@ -9,16 +9,20 @@ import nl.han.ica.OOPDProcessingEngineHAN.View.View;
 import nl.han.ica.waterworld.TextObject;
 import processing.core.PApplet;
 
+import javax.xml.soap.Text;
+
 public class AgeOfWar extends GameEngine {
 
     Playfield p = new Playfield(this);
     private TextObject dashboardText;
+    public TextObject playerTowerText;
+    public TextObject NPCTowerText;
+
     private Sound gameSound;
     private int saldo;
-    Dashboard towerHealthPlayer = new Dashboard(40, 800, 500, 1);
-    Dashboard towerHealthNPC = new Dashboard(40, 300, 500, 1);
-    TextObject playerTowerHealth;
-    TextObject NPCTowerHealth;
+
+    Dashboard towerHealthPlayer = new Dashboard(10, 220, 500, 400);
+    Dashboard towerHealthNPC = new Dashboard(600, 220, 900, 400);
 
     public static void main(String[] args){
         PApplet.main(new String[]{"nl.han.ica.ageofware.AgeOfWar"});
@@ -33,8 +37,15 @@ public class AgeOfWar extends GameEngine {
         createDashboard(worldWidth,100);
         createViewWithoutViewport(worldWidth, worldHeight);
         initializeSound();
-        p.towerPlayerHealthGenerator(worldWidth, 300);
-        p.towerNPCHealthGenerator(worldWidth, 100);
+
+        NPCTowerText = new TextObject("");
+        towerHealthPlayer.addGameObject(NPCTowerText);
+        addDashboard(towerHealthNPC);
+
+        playerTowerText = new TextObject("");
+        towerHealthNPC.addGameObject(playerTowerText);
+        addDashboard(towerHealthPlayer);
+
     }
 
     public int getSaldo() {
@@ -61,7 +72,11 @@ public class AgeOfWar extends GameEngine {
         setView(view);
         size(screenWidth, screenHeight);
         p.createObjects();
-        p.generateCharacter();
+    }
+
+    @Override
+    public void update() {
+        p.towerTextTextSetter();
     }
 
     private void createDashboard(int dashboardWidth,int dashboardHeight) {
@@ -74,14 +89,4 @@ public class AgeOfWar extends GameEngine {
     public void refreshDasboardText() {
         dashboardText.setText("Saldo: " + getSaldo());
     }
-
-    public void refreshTowerText(){
-        p.towerTextTextSetter();
-    }
-
-    @Override
-    public void update() {
-    }
-
-
 }

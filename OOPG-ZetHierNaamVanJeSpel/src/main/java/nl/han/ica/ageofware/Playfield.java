@@ -10,8 +10,10 @@ import java.util.TimerTask;
 public class Playfield extends Timer{
     AgeOfWar aow;
     CharacterFactory randomPicker;
+
     private int timerMin = 70;
     private int timerMax = 80;
+
     Tower user;
     Tower computer;
 
@@ -40,24 +42,17 @@ public class Playfield extends Timer{
         timer.schedule(tasknew, 0, (randomCharacterSpawnTime * 100));
 
     }
-
-    public void generateCharacter(){
-    }
-
-    public void towerPlayerHealthGenerator(int dashboardWidth, int dashboardHeight){
-        aow.playerTowerHealth=new TextObject("");
-        aow.addGameObject(aow.playerTowerHealth);
-        aow.addDashboard(aow.towerHealthPlayer);
-    }
-
-    public void towerNPCHealthGenerator(int dashboardWidth, int dashboardHeight){
-        aow.NPCTowerHealth=new TextObject("");
-        aow.addGameObject(aow.NPCTowerHealth);
-        aow.addDashboard(aow.towerHealthNPC);
-    }
+//
+//    public void towerHealthGenerator(){
+//        aow.NPCTowerText = new TextObject("");
+//        aow.towerHealthPlayer.addGameObject(aow.NPCTowerText);
+//
+//        aow.playerTowerText = new TextObject("");
+//        aow.towerHealthNPC.addGameObject(aow.playerTowerText);
+//    }
 
     public void towerTextTextSetter(){
-        aow.playerTowerHealth.setText("Health: " + user.getHealth());
-        aow.NPCTowerHealth.setText("Health: " + computer.getHealth());
+        aow.NPCTowerText.setText("Health: " + computer.getHealth());
+        aow.playerTowerText.setText("Health: " + user.getHealth());
     }
 }
