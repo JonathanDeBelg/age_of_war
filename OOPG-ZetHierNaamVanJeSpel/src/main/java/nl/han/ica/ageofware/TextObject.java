@@ -8,10 +8,18 @@ public class TextObject extends GameObject {
 
     private String text;
 
+    /**
+     * Constructor
+     * @param text de tekst voor het object
+     */
     public TextObject(String text) {
         this.text=text;
     }
 
+    /**
+     *  Past de tekst aan naar de parameter
+     * @param text de tekst waarin het gezet moet worden
+     */
     public void setText(String text) {
         this.text=text;
     }

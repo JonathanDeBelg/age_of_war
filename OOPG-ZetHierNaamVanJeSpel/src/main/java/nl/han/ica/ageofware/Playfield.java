@@ -17,6 +17,10 @@ public class Playfield extends Timer{
     Tower user;
     Tower computer;
 
+    /**
+     * Constructor
+     * @param aow het spel
+     */
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
         aow.addGameObject(new PlayerPicker(aow));
@@ -42,15 +46,11 @@ public class Playfield extends Timer{
         timer.schedule(tasknew, 0, (randomCharacterSpawnTime * 100));
 
     }
-//
-//    public void towerHealthGenerator(){
-//        aow.NPCTowerText = new TextObject("");
-//        aow.towerHealthPlayer.addGameObject(aow.NPCTowerText);
-//
-//        aow.playerTowerText = new TextObject("");
-//        aow.towerHealthNPC.addGameObject(aow.playerTowerText);
-//    }
 
+    /**
+     * Deze functie haalt de health van de towers op
+     * Deze functie wordt geupdatet binnen de AgeOfWar class
+     */
     public void towerTextTextSetter(){
         aow.NPCTowerText.setText("Health: " + computer.getHealth());
         aow.playerTowerText.setText("Health: " + user.getHealth());
