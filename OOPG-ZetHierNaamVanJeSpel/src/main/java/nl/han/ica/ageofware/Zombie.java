@@ -2,7 +2,7 @@ package nl.han.ica.ageofware;
 
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
-public class Zombie extends Character {
+public class Zombie extends WalkingCharacters {
     int direction;
     private int health = 100;
     long prevMillis = 0;
@@ -13,7 +13,7 @@ public class Zombie extends Character {
     }
 
     @Override
-    public void doDamage(Character c) {
+    public void doDamage(WalkingCharacters c) {
         c.setHealth(40);
     }
 

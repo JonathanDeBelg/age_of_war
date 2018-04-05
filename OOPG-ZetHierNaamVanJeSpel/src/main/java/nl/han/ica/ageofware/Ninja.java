@@ -2,19 +2,19 @@ package nl.han.ica.ageofware;
 
 import nl.han.ica.OOPDProcessingEngineHAN.Objects.Sprite;
 
-public class Ninja extends Character {
+public class Ninja extends WalkingCharacters {
 
-    private int health = 125;
+    private int health = 150;
     private int returnMoney = 100;
-
+    private int damage = 60;
     public Ninja(String sprite, int direction, AgeOfWar aow, int cost) {
         super(new Sprite(sprite), direction, aow, 250);
     }
 
 
     @Override
-    public void doDamage(Character c) {
-        c.setHealth(40);
+    public void doDamage(WalkingCharacters c) {
+        c.setHealth(damage);
     }
 
     @Override
