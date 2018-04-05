@@ -15,7 +15,6 @@ public class Tower extends SpriteObject {
     private AgeOfWar aow;
 
 
-
     public Tower(AgeOfWar aow, int x, int y) {
         this(new Sprite("src/main/java/nl/han/ica/ageofware/media/coffin.png"));
         this.x = x;
@@ -56,9 +55,9 @@ public class Tower extends SpriteObject {
 //        aow.refreshDasboardText();
 //    }
 
-
     @Override
     public void update() {
-
+//        System.out.println(getHealth());
+        aow.refreshTowerText();
     }
 }

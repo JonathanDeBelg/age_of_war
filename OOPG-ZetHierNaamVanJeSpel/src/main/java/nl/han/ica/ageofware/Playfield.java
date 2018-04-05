@@ -1,5 +1,8 @@
 package nl.han.ica.ageofware;
 
+import nl.han.ica.OOPDProcessingEngineHAN.Dashboard.Dashboard;
+import nl.han.ica.waterworld.TextObject;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -9,6 +12,8 @@ public class Playfield extends Timer{
     CharacterFactory randomPicker;
     private int timerMin = 70;
     private int timerMax = 80;
+    Tower user;
+    Tower computer;
 
     public Playfield(AgeOfWar aow) {
         this.aow = aow;
@@ -20,8 +25,8 @@ public class Playfield extends Timer{
      * Maakt de spelobjecten aan
      */
     public void createObjects() {
-        Tower user = new Tower(aow, 0, aow.height - 255);
-        Tower computer = new Tower(aow, aow.width-100, aow.height - 255);
+        user = new Tower(aow, 0, aow.height - 255);
+        computer = new Tower(aow, aow.width-100, aow.height - 255);
 
         Random rand = new Random();
 
@@ -37,5 +42,22 @@ public class Playfield extends Timer{
     }
 
     public void generateCharacter(){
+    }
+
+    public void towerPlayerHealthGenerator(int dashboardWidth, int dashboardHeight){
+        aow.playerTowerHealth=new TextObject("");
+        aow.addGameObject(aow.playerTowerHealth);
+        aow.addDashboard(aow.towerHealthPlayer);
+    }
+
+    public void towerNPCHealthGenerator(int dashboardWidth, int dashboardHeight){
+        aow.NPCTowerHealth=new TextObject("");
+        aow.addGameObject(aow.NPCTowerHealth);
+        aow.addDashboard(aow.towerHealthNPC);
+    }
+
+    public void towerTextTextSetter(){
+        aow.playerTowerHealth.setText("Health: " + user.getHealth());
+        aow.NPCTowerHealth.setText("Health: " + computer.getHealth());
     }
 }

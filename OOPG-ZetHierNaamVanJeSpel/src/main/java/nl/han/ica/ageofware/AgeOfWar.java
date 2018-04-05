@@ -15,7 +15,10 @@ public class AgeOfWar extends GameEngine {
     private TextObject dashboardText;
     private Sound gameSound;
     private int saldo;
-
+    Dashboard towerHealthPlayer = new Dashboard(40, 800, 500, 1);
+    Dashboard towerHealthNPC = new Dashboard(40, 300, 500, 1);
+    TextObject playerTowerHealth;
+    TextObject NPCTowerHealth;
 
     public static void main(String[] args){
         PApplet.main(new String[]{"nl.han.ica.ageofware.AgeOfWar"});
@@ -30,6 +33,8 @@ public class AgeOfWar extends GameEngine {
         createDashboard(worldWidth,100);
         createViewWithoutViewport(worldWidth, worldHeight);
         initializeSound();
+        p.towerPlayerHealthGenerator(worldWidth, 300);
+        p.towerNPCHealthGenerator(worldWidth, 100);
     }
 
     public int getSaldo() {
@@ -59,10 +64,6 @@ public class AgeOfWar extends GameEngine {
         p.generateCharacter();
     }
 
-    @Override
-    public void update() {
-    }
-
     private void createDashboard(int dashboardWidth,int dashboardHeight) {
         Dashboard dashboard = new Dashboard(10,10, dashboardWidth, dashboardHeight);
         dashboardText=new TextObject("");
@@ -72,6 +73,14 @@ public class AgeOfWar extends GameEngine {
 
     public void refreshDasboardText() {
         dashboardText.setText("Saldo: " + getSaldo());
+    }
+
+    public void refreshTowerText(){
+        p.towerTextTextSetter();
+    }
+
+    @Override
+    public void update() {
     }
 
 

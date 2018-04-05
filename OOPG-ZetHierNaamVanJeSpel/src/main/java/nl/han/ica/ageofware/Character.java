@@ -73,17 +73,6 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         }
     }
 
-    @Override
-    public void update() {
-        if (getX() + getWidth() <= 0) {
-            setX(1500);
-            die(this);
-        }
-        setxSpeed(direction);
-
-        aow.refreshDasboardText();
-    }
-
     private void attack(Character c) {
         long currentMillis = System.currentTimeMillis();
 
@@ -106,6 +95,7 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
         if (t.getHealth() <= 0) {
             aow.deleteGameObject(t);
             System.out.println("De tower is verslagen");
+            aow.pause();
         }
     }
 
@@ -127,4 +117,15 @@ public abstract class Character extends SpriteObject implements ICollidableWithG
     public abstract void setHealth(int health);
 
     public abstract void returnMoneyOnDie();
+
+    @Override
+    public void update() {
+        if (getX() + getWidth() <= 0) {
+            setX(1500);
+            die(this);
+        }
+        setxSpeed(direction);
+
+        aow.refreshDasboardText();
+    }
 }
